@@ -1,11 +1,14 @@
+/**
+ * @jest-environment jsdom
+ */
 import React from 'react';
-import renderer from 'react-test-renderer';
+import {render} from '@testing-library/react';
 import Footer from './footer.jsx';
 
 describe(`Footer`, () => {
   it(`Should render correctly footer`, () => {
-    const tree = renderer.create(<Footer/>).toJSON();
-    expect(tree).toMatchSnapshot();
+    const {asFragment} = render(<Footer/>);
+    expect(asFragment()).toMatchSnapshot();
   });
 
 });

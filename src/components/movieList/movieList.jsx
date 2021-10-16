@@ -1,25 +1,27 @@
 import React from 'react';
 import SmallMovieCard from '../smallMovieCard/smallMovieCard.jsx';
-import {movies} from '../../constants/data.js';
+import PropTypes from 'prop-types';
+import withActiveCard from '../../hocs/withActiveCard/withActiveCard.js';
 
-const MovieList = () => {
-
+const WrappedSmallMovieCard = withActiveCard(SmallMovieCard);
+const MovieList = ({moviesList}) => {
   return (
     <>
       <div className="catalog__movies-list">
         {
-          movies.map((movie) => {
+          moviesList.map((it) => {
             return (
-              <SmallMovieCard
-                key={movie.id}
-                movie={movie}
-              />
+              <WrappedSmallMovieCard movie={it} key={it.id}/>
             );
           })
         }
       </div>
     </>
   );
+};
+
+MovieList.propTypes = {
+  moviesList: PropTypes.array
 };
 
 export default MovieList;

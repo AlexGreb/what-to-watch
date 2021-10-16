@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ShowMore Should render correctly a ShowMore component 1`] = `
+<DocumentFragment>
+  <button
+    class="catalog__button"
+    type="button"
+  >
+    Show more
+  </button>
+</DocumentFragment>
+`;

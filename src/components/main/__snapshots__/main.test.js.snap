@@ -1,41 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Main Should render correctly main page 1`] = `
-Array [
+<DocumentFragment>
   <section
-    className="movie-card"
+    class="movie-card"
   >
     <header
-      className="page-header movie-card__head"
+      class="page-header movie-card__head"
     >
       <div
-        className="logo"
+        class="logo"
       >
         <a
-          className="logo__link"
+          class="logo__link"
         >
           <span
-            className="logo__letter logo__letter--1"
+            class="logo__letter logo__letter--1"
           >
             W
           </span>
           <span
-            className="logo__letter logo__letter--2"
+            class="logo__letter logo__letter--2"
           >
             T
           </span>
           <span
-            className="logo__letter logo__letter--3"
+            class="logo__letter logo__letter--3"
           >
             W
           </span>
         </a>
       </div>
       <div
-        className="user-block"
+        class="user-block"
       >
         <div
-          className="user-block__avatar"
+          class="user-block__avatar"
         >
           <img
             alt="User avatar"
@@ -47,7 +47,7 @@ Array [
       </div>
     </header>
     <div
-      className="movie-card__bg"
+      class="movie-card__bg"
     >
       <img
         alt="The Grand Budapest Hotel"
@@ -55,18 +55,18 @@ Array [
       />
     </div>
     <h1
-      className="visually-hidden"
+      class="visually-hidden"
     >
       WTW
     </h1>
     <div
-      className="movie-card__wrap"
+      class="movie-card__wrap"
     >
       <div
-        className="movie-card__info"
+        class="movie-card__info"
       >
         <div
-          className="movie-card__poster"
+          class="movie-card__poster"
         >
           <img
             alt="The Grand Budapest Hotel poster"
@@ -76,32 +76,32 @@ Array [
           />
         </div>
         <div
-          className="movie-card__desc"
+          class="movie-card__desc"
         >
           <h2
-            className="movie-card__title"
+            class="movie-card__title"
           >
             The Grand Budapest Hotel
           </h2>
           <p
-            className="movie-card__meta"
+            class="movie-card__meta"
           >
             <span
-              className="movie-card__genre"
+              class="movie-card__genre"
             >
               Drama
             </span>
             <span
-              className="movie-card__year"
+              class="movie-card__year"
             >
               2014
             </span>
           </p>
           <div
-            className="movie-card__buttons"
+            class="movie-card__buttons"
           >
             <button
-              className="btn btn--play movie-card__button"
+              class="btn btn--play movie-card__button"
               type="button"
             >
               <svg
@@ -110,7 +110,7 @@ Array [
                 width="19"
               >
                 <use
-                  xlinkHref="#play-s"
+                  xlink:href="#play-s"
                 />
               </svg>
               <span>
@@ -118,7 +118,7 @@ Array [
               </span>
             </button>
             <button
-              className="btn btn--list movie-card__button"
+              class="btn btn--list movie-card__button"
               type="button"
             >
               <svg
@@ -127,7 +127,7 @@ Array [
                 width="19"
               >
                 <use
-                  xlinkHref="#add"
+                  xlink:href="#add"
                 />
               </svg>
               <span>
@@ -138,771 +138,70 @@ Array [
         </div>
       </div>
     </div>
-  </section>,
+  </section>
   <div
-    className="page-content"
+    class="page-content"
   >
     <section
-      className="catalog"
+      class="catalog"
     >
       <h2
-        className="catalog__title visually-hidden"
+        class="catalog__title visually-hidden"
       >
         Catalog
       </h2>
       <ul
-        className="catalog__genres-list"
+        class="catalog__genres-list"
       >
         <li
-          className="catalog__genres-item catalog__genres-item--active"
+          class="catalog__genres-item catalog__genres-item--active"
         >
           <a
-            className="catalog__genres-link"
+            class="catalog__genres-link"
             href="#"
           >
             All genres
           </a>
         </li>
-        <li
-          className="catalog__genres-item"
-        >
-          <a
-            className="catalog__genres-link"
-            href="#"
-          >
-            Comedies
-          </a>
-        </li>
-        <li
-          className="catalog__genres-item"
-        >
-          <a
-            className="catalog__genres-link"
-            href="#"
-          >
-            Crime
-          </a>
-        </li>
-        <li
-          className="catalog__genres-item"
-        >
-          <a
-            className="catalog__genres-link"
-            href="#"
-          >
-            Documentary
-          </a>
-        </li>
-        <li
-          className="catalog__genres-item"
-        >
-          <a
-            className="catalog__genres-link"
-            href="#"
-          >
-            Dramas
-          </a>
-        </li>
-        <li
-          className="catalog__genres-item"
-        >
-          <a
-            className="catalog__genres-link"
-            href="#"
-          >
-            Horror
-          </a>
-        </li>
-        <li
-          className="catalog__genres-item"
-        >
-          <a
-            className="catalog__genres-link"
-            href="#"
-          >
-            Kids & Family
-          </a>
-        </li>
-        <li
-          className="catalog__genres-item"
-        >
-          <a
-            className="catalog__genres-link"
-            href="#"
-          >
-            Romance
-          </a>
-        </li>
-        <li
-          className="catalog__genres-item"
-        >
-          <a
-            className="catalog__genres-link"
-            href="#"
-          >
-            Sci-Fi
-          </a>
-        </li>
-        <li
-          className="catalog__genres-item"
-        >
-          <a
-            className="catalog__genres-link"
-            href="#"
-          >
-            Thrillers
-          </a>
-        </li>
       </ul>
       <div
-        className="catalog__movies-list"
-      >
-        <article
-          className="small-movie-card catalog__movies-card"
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="Fantastic Beasts: The Crimes of Grindelwald"
-              height="175"
-              src="https://es31-server.appspot.com/wtw/static/film/preview/pulp-fiction.jpg"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-            >
-              Pulp Fiction
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="Fantastic Beasts: The Crimes of Grindelwald"
-              height="175"
-              src="https://es31-server.appspot.com/wtw/static/film/preview/matrix.jpg"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-            >
-              Matrix
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="Fantastic Beasts: The Crimes of Grindelwald"
-              height="175"
-              src="https://es31-server.appspot.com/wtw/static/film/preview/revenant.jpg"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-            >
-              The Revenant
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="Fantastic Beasts: The Crimes of Grindelwald"
-              height="175"
-              src="https://es31-server.appspot.com/wtw/static/film/preview/legend.jpg"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-            >
-              Legend
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="Fantastic Beasts: The Crimes of Grindelwald"
-              height="175"
-              src="https://es31-server.appspot.com/wtw/static/film/preview/bohemian_rhapsody.jpg"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-            >
-              Bohemian Rhapsody
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="Fantastic Beasts: The Crimes of Grindelwald"
-              height="175"
-              src="https://es31-server.appspot.com/wtw/static/film/preview/no-country-for-old-men.jpg"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-            >
-              No Country for Old Men
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="Fantastic Beasts: The Crimes of Grindelwald"
-              height="175"
-              src="https://es31-server.appspot.com/wtw/static/film/preview/snatch.jpg"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-            >
-              Snatch
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="Fantastic Beasts: The Crimes of Grindelwald"
-              height="175"
-              src="https://es31-server.appspot.com/wtw/static/film/preview/johnny-english.jpg"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-            >
-              Johnny English
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="Fantastic Beasts: The Crimes of Grindelwald"
-              height="175"
-              src="https://es31-server.appspot.com/wtw/static/film/preview/bronson.jpg"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-            >
-              Bronson
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="Fantastic Beasts: The Crimes of Grindelwald"
-              height="175"
-              src="https://es31-server.appspot.com/wtw/static/film/preview/seven-years-in-tibet.jpg"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-            >
-              Seven Years in Tibet
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="Fantastic Beasts: The Crimes of Grindelwald"
-              height="175"
-              src="https://es31-server.appspot.com/wtw/static/film/preview/aviator.jpg"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-            >
-              Aviator
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="Fantastic Beasts: The Crimes of Grindelwald"
-              height="175"
-              src="https://es31-server.appspot.com/wtw/static/film/preview/A_Star_Is_Born.jpg"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-            >
-              A Star Is Born
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="Fantastic Beasts: The Crimes of Grindelwald"
-              height="175"
-              src="https://es31-server.appspot.com/wtw/static/film/preview/orlando.jpg"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-            >
-              Orlando
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="Fantastic Beasts: The Crimes of Grindelwald"
-              height="175"
-              src="https://es31-server.appspot.com/wtw/static/film/preview/beach.jpg"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-            >
-              Beach
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="Fantastic Beasts: The Crimes of Grindelwald"
-              height="175"
-              src="https://es31-server.appspot.com/wtw/static/film/preview/we-need-to-talk-about-kevin.jpg"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-            >
-              We need to talk about Kevin
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="Fantastic Beasts: The Crimes of Grindelwald"
-              height="175"
-              src="https://es31-server.appspot.com/wtw/static/film/preview/gangs_of_new_york.jpg"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-            >
-              Gangs of new york
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="Fantastic Beasts: The Crimes of Grindelwald"
-              height="175"
-              src="https://es31-server.appspot.com/wtw/static/film/preview/fantastic-beasts-the-crimes-of-grindelwald.jpg"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-            >
-              Fantastic Beasts: The Crimes of Grindelwald
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="Fantastic Beasts: The Crimes of Grindelwald"
-              height="175"
-              src="https://es31-server.appspot.com/wtw/static/film/preview/macbeth.jpg"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-            >
-              Macbeth
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="Fantastic Beasts: The Crimes of Grindelwald"
-              height="175"
-              src="https://es31-server.appspot.com/wtw/static/film/preview/what-we-do-in-the-shadows.jpg"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-            >
-              What We Do in the Shadows
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="Fantastic Beasts: The Crimes of Grindelwald"
-              height="175"
-              src="https://es31-server.appspot.com/wtw/static/film/preview/shutter-island.jpg"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-            >
-              Shutter Island
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="Fantastic Beasts: The Crimes of Grindelwald"
-              height="175"
-              src="https://es31-server.appspot.com/wtw/static/film/preview/war-of-the-worlds.jpg"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-            >
-              War of the Worlds
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="Fantastic Beasts: The Crimes of Grindelwald"
-              height="175"
-              src="https://es31-server.appspot.com/wtw/static/film/preview/dardjeeling_limited.jpg"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-            >
-              Dardjeeling Limited
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="Fantastic Beasts: The Crimes of Grindelwald"
-              height="175"
-              src="https://es31-server.appspot.com/wtw/static/film/preview/Once_Upon_a_Time_in_America.jpg"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-            >
-              Once Upon a Time in America
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="Fantastic Beasts: The Crimes of Grindelwald"
-              height="175"
-              src="https://es31-server.appspot.com/wtw/static/film/preview/midnight-special.jpg"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-            >
-              Midnight Special
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="Fantastic Beasts: The Crimes of Grindelwald"
-              height="175"
-              src="https://es31-server.appspot.com/wtw/static/film/preview/moonrise-kingdom.jpg"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-            >
-              Moonrise Kingdom
-            </a>
-          </h3>
-        </article>
-      </div>
-      <div
-        className="catalog__more"
-      >
-        <button
-          className="catalog__button"
-          type="button"
-        >
-          Show more
-        </button>
-      </div>
+        class="catalog__movies-list"
+      />
     </section>
     <footer
-      className="page-footer"
+      class="page-footer"
     >
       <div
-        className="logo"
+        class="logo"
       >
         <a
-          className="logo__link logo__link--light"
+          class="logo__link logo__link--light"
         >
           <span
-            className="logo__letter logo__letter--1"
+            class="logo__letter logo__letter--1"
           >
             W
           </span>
           <span
-            className="logo__letter logo__letter--2"
+            class="logo__letter logo__letter--2"
           >
             T
           </span>
           <span
-            className="logo__letter logo__letter--3"
+            class="logo__letter logo__letter--3"
           >
             W
           </span>
         </a>
       </div>
       <div
-        className="copyright"
+        class="copyright"
       >
         <p>
           © 2019 What to watch Ltd.
         </p>
       </div>
     </footer>
-  </div>,
-]
+  </div>
+</DocumentFragment>
 `;

@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MoviePageDetails Should render correctly a MoviePageDetails component 1`] = `
+<DocumentFragment>
+  <div
+    class="movie-card__text movie-card__row"
+  >
+    <div
+      class="movie-card__text-col"
+    >
+      <p
+        class="movie-card__details-item"
+      >
+        <strong
+          class="movie-card__details-name"
+        >
+          Director
+        </strong>
+        <span
+          class="movie-card__details-value"
+        >
+          Quentin Tarantino
+        </span>
+      </p>
+      <p
+        class="movie-card__details-item"
+      >
+        <strong
+          class="movie-card__details-name"
+        >
+          Starring
+        </strong>
+        <span
+          class="movie-card__details-value"
+        >
+          John Travolta, 
+          <br />
+          Uma Thurman, 
+          <br />
+          Samuel L. Jackson 
+          <br />
+        </span>
+      </p>
+    </div>
+    <div
+      class="movie-card__text-col"
+    >
+      <p
+        class="movie-card__details-item"
+      >
+        <strong
+          class="movie-card__details-name"
+        >
+          Run Time
+        </strong>
+        <span
+          class="movie-card__details-value"
+        >
+          2h 33m
+        </span>
+      </p>
+      <p
+        class="movie-card__details-item"
+      >
+        <strong
+          class="movie-card__details-name"
+        >
+          Genre
+        </strong>
+        <span
+          class="movie-card__details-value"
+        >
+          Crime
+        </span>
+      </p>
+      <p
+        class="movie-card__details-item"
+      >
+        <strong
+          class="movie-card__details-name"
+        >
+          Released
+        </strong>
+        <span
+          class="movie-card__details-value"
+        >
+          1994
+        </span>
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;

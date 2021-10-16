@@ -1,141 +1,143 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`MovieCard Should render correctly a movie card 1`] = `
-<section
-  className="movie-card"
->
-  <header
-    className="page-header movie-card__head"
+<DocumentFragment>
+  <section
+    class="movie-card"
   >
-    <div
-      className="logo"
-    >
-      <a
-        className="logo__link"
-      >
-        <span
-          className="logo__letter logo__letter--1"
-        >
-          W
-        </span>
-        <span
-          className="logo__letter logo__letter--2"
-        >
-          T
-        </span>
-        <span
-          className="logo__letter logo__letter--3"
-        >
-          W
-        </span>
-      </a>
-    </div>
-    <div
-      className="user-block"
+    <header
+      class="page-header movie-card__head"
     >
       <div
-        className="user-block__avatar"
+        class="logo"
       >
-        <img
-          alt="User avatar"
-          height="63"
-          src="img/avatar.jpg"
-          width="63"
-        />
-      </div>
-    </div>
-  </header>
-  <div
-    className="movie-card__bg"
-  >
-    <img
-      alt="The Grand Budapest Hotel"
-      src="img/bg-the-grand-budapest-hotel.jpg"
-    />
-  </div>
-  <h1
-    className="visually-hidden"
-  >
-    WTW
-  </h1>
-  <div
-    className="movie-card__wrap"
-  >
-    <div
-      className="movie-card__info"
-    >
-      <div
-        className="movie-card__poster"
-      >
-        <img
-          alt="The Grand Budapest Hotel poster"
-          height="327"
-          src="img/the-grand-budapest-hotel-poster.jpg"
-          width="218"
-        />
-      </div>
-      <div
-        className="movie-card__desc"
-      >
-        <h2
-          className="movie-card__title"
-        >
-          The Grand Budapest Hotel
-        </h2>
-        <p
-          className="movie-card__meta"
+        <a
+          class="logo__link"
         >
           <span
-            className="movie-card__genre"
+            class="logo__letter logo__letter--1"
           >
-            Drama
+            W
           </span>
           <span
-            className="movie-card__year"
+            class="logo__letter logo__letter--2"
           >
-            2014
+            T
           </span>
-        </p>
+          <span
+            class="logo__letter logo__letter--3"
+          >
+            W
+          </span>
+        </a>
+      </div>
+      <div
+        class="user-block"
+      >
         <div
-          className="movie-card__buttons"
+          class="user-block__avatar"
         >
-          <button
-            className="btn btn--play movie-card__button"
-            type="button"
+          <img
+            alt="User avatar"
+            height="63"
+            src="img/avatar.jpg"
+            width="63"
+          />
+        </div>
+      </div>
+    </header>
+    <div
+      class="movie-card__bg"
+    >
+      <img
+        alt="The Grand Budapest Hotel"
+        src="img/bg-the-grand-budapest-hotel.jpg"
+      />
+    </div>
+    <h1
+      class="visually-hidden"
+    >
+      WTW
+    </h1>
+    <div
+      class="movie-card__wrap"
+    >
+      <div
+        class="movie-card__info"
+      >
+        <div
+          class="movie-card__poster"
+        >
+          <img
+            alt="The Grand Budapest Hotel poster"
+            height="327"
+            src="img/the-grand-budapest-hotel-poster.jpg"
+            width="218"
+          />
+        </div>
+        <div
+          class="movie-card__desc"
+        >
+          <h2
+            class="movie-card__title"
           >
-            <svg
-              height="19"
-              viewBox="0 0 19 19"
-              width="19"
-            >
-              <use
-                xlinkHref="#play-s"
-              />
-            </svg>
-            <span>
-              Play
-            </span>
-          </button>
-          <button
-            className="btn btn--list movie-card__button"
-            type="button"
+            The Grand Budapest Hotel
+          </h2>
+          <p
+            class="movie-card__meta"
           >
-            <svg
-              height="20"
-              viewBox="0 0 19 20"
-              width="19"
+            <span
+              class="movie-card__genre"
             >
-              <use
-                xlinkHref="#add"
-              />
-            </svg>
-            <span>
-              My list
+              Drama
             </span>
-          </button>
+            <span
+              class="movie-card__year"
+            >
+              2014
+            </span>
+          </p>
+          <div
+            class="movie-card__buttons"
+          >
+            <button
+              class="btn btn--play movie-card__button"
+              type="button"
+            >
+              <svg
+                height="19"
+                viewBox="0 0 19 19"
+                width="19"
+              >
+                <use
+                  xlink:href="#play-s"
+                />
+              </svg>
+              <span>
+                Play
+              </span>
+            </button>
+            <button
+              class="btn btn--list movie-card__button"
+              type="button"
+            >
+              <svg
+                height="20"
+                viewBox="0 0 19 20"
+                width="19"
+              >
+                <use
+                  xlink:href="#add"
+                />
+              </svg>
+              <span>
+                My list
+              </span>
+            </button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+</DocumentFragment>
 `;

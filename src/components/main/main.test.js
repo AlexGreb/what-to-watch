@@ -1,10 +1,26 @@
+/**
+ * @jest-environment jsdom
+ */
 import React from 'react';
-import renderer from 'react-test-renderer';
+import {render} from '@testing-library/react';
 import Main from './main.jsx';
+import {moviesList} from '../../mocks/movies.js';
+import {Provider} from 'react-redux';
+import {store} from '../../store/store.js';
 
 describe(`Main`, () => {
+  window.HTMLMediaElement.prototype.load = () => {};
+  window.HTMLMediaElement.prototype.play = () => {};
+  window.HTMLMediaElement.prototype.pause = () => {};
+
   it(`Should render correctly main page`, () => {
-    const tree = renderer.create(<Main/>).toJSON();
-    expect(tree).toMatchSnapshot();
+    const {asFragment} = render(
+        <Provider store={store}>
+          <Main
+            moviesList={moviesList}
+          />
+        </Provider>
+    );
+    expect(asFragment()).toMatchSnapshot();
   });
 });

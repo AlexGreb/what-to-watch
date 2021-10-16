@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Video player Should render correctly a video player 1`] = `
+<DocumentFragment>
+  <video
+    class="player__video"
+    height="175"
+    poster="https://es31-server.appspot.com/wtw/static/film/preview/pulp-fiction.jpg"
+    src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
+    width="280"
+  />
+</DocumentFragment>
+`;

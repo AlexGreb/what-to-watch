@@ -1,10 +1,13 @@
+/**
+ * @jest-environment jsdom
+ */
 import React from 'react';
-import renderer from 'react-test-renderer';
+import {render} from '@testing-library/react';
 import MovieCard from './movieCard.jsx';
 
 describe(`MovieCard`, () => {
   it(`Should render correctly a movie card`, () => {
-    const tree = renderer.create(<MovieCard/>).toJSON();
-    expect(tree).toMatchSnapshot();
+    const {asFragment} = render(<MovieCard/>);
+    expect(asFragment()).toMatchSnapshot();
   });
 });

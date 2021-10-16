@@ -1,45 +1,47 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header Should render correctly header 1`] = `
-<header
-  className="page-header movie-card__head"
->
-  <div
-    className="logo"
-  >
-    <a
-      className="logo__link"
-    >
-      <span
-        className="logo__letter logo__letter--1"
-      >
-        W
-      </span>
-      <span
-        className="logo__letter logo__letter--2"
-      >
-        T
-      </span>
-      <span
-        className="logo__letter logo__letter--3"
-      >
-        W
-      </span>
-    </a>
-  </div>
-  <div
-    className="user-block"
+<DocumentFragment>
+  <header
+    class="page-header movie-card__head"
   >
     <div
-      className="user-block__avatar"
+      class="logo"
     >
-      <img
-        alt="User avatar"
-        height="63"
-        src="img/avatar.jpg"
-        width="63"
-      />
+      <a
+        class="logo__link"
+      >
+        <span
+          class="logo__letter logo__letter--1"
+        >
+          W
+        </span>
+        <span
+          class="logo__letter logo__letter--2"
+        >
+          T
+        </span>
+        <span
+          class="logo__letter logo__letter--3"
+        >
+          W
+        </span>
+      </a>
     </div>
-  </div>
-</header>
+    <div
+      class="user-block"
+    >
+      <div
+        class="user-block__avatar"
+      >
+        <img
+          alt="User avatar"
+          height="63"
+          src="img/avatar.jpg"
+          width="63"
+        />
+      </div>
+    </div>
+  </header>
+</DocumentFragment>
 `;
