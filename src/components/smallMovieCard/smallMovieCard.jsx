@@ -1,12 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import VideoPlayer from '../../components/videoPlayer/videoPlayer.jsx';
+import {useNavigate} from 'react-router-dom';
+import {dataUrl} from '../../constants/consts.js';
 
-/* Сделать адаптер */
 const SmallMovieCard = ({movie, onMouseEnter, onMouseLeave, isPlaying}) => {
+  const navigator = useNavigate();
+  const toMovie = () => {
+    navigator(`${dataUrl.FILMS}${movie.id}`);
+  };
+
   return (
     <>
-      <article className={`small-movie-card catalog__movies-card`}
+      <div
+        onClick={toMovie}
+        className={`small-movie-card catalog__movies-card`}
         onMouseLeave={onMouseLeave}
         onMouseEnter={onMouseEnter}
       >
@@ -19,7 +27,7 @@ const SmallMovieCard = ({movie, onMouseEnter, onMouseLeave, isPlaying}) => {
         <h3 className="small-movie-card__title">
           <a className="small-movie-card__link" href="movie-page.html">{movie.title}</a>
         </h3>
-      </article>
+      </div>
     </>
   );
 };

@@ -35,14 +35,14 @@ exports[`Main Should render correctly main page 1`] = `
         class="user-block"
       >
         <div
-          class="user-block__avatar"
+          class="user-block"
         >
-          <img
-            alt="User avatar"
-            height="63"
-            src="img/avatar.jpg"
-            width="63"
-          />
+          <a
+            class="user-block__link"
+            href="sign-in.html"
+          >
+            Sign in
+          </a>
         </div>
       </div>
     </header>
@@ -51,7 +51,6 @@ exports[`Main Should render correctly main page 1`] = `
     >
       <img
         alt="The Grand Budapest Hotel"
-        src="img/bg-the-grand-budapest-hotel.jpg"
       />
     </div>
     <h1
@@ -69,9 +68,7 @@ exports[`Main Should render correctly main page 1`] = `
           class="movie-card__poster"
         >
           <img
-            alt="The Grand Budapest Hotel poster"
             height="327"
-            src="img/the-grand-budapest-hotel-poster.jpg"
             width="218"
           />
         </div>
@@ -80,29 +77,22 @@ exports[`Main Should render correctly main page 1`] = `
         >
           <h2
             class="movie-card__title"
-          >
-            The Grand Budapest Hotel
-          </h2>
+          />
           <p
             class="movie-card__meta"
           >
             <span
               class="movie-card__genre"
-            >
-              Drama
-            </span>
+            />
             <span
               class="movie-card__year"
-            >
-              2014
-            </span>
+            />
           </p>
           <div
             class="movie-card__buttons"
           >
             <button
               class="btn btn--play movie-card__button"
-              type="button"
             >
               <svg
                 height="19"
@@ -119,7 +109,6 @@ exports[`Main Should render correctly main page 1`] = `
             </button>
             <button
               class="btn btn--list movie-card__button"
-              type="button"
             >
               <svg
                 height="20"

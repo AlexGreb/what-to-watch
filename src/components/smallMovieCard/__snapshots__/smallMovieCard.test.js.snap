@@ -9,6 +9,7 @@ exports[`SmallMovieCard Should render correctly movie card 1`] = `
       class="player__video"
       height="175"
       poster="https://es31-server.appspot.com/wtw/static/film/preview/pulp-fiction.jpg"
+      preload="none"
       src="http://peach.themazzone.com/durian/movies/sintel-1024-surround.mp4"
       width="280"
     />

@@ -13,3 +13,7 @@ export const getMoviesByGenre = (genre, movies) => {
 export const getCountedMoviesList = (movies, count = movies.length) => {
   return movies.slice(0, count);
 };
+
+export const getMovieById = (movies, id) => {
+  return movies.find((it) => it.id === id);
+};

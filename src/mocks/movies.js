@@ -606,3 +606,22 @@ export const videoData = {
 };
 
 export const genres = [`All genres`, `Drama`, `Comedy`, `Thriller`, `Fantasy`, `Horror`];
+
+export const promoMovie = {
+  "name": `War of the Worlds`,
+  "poster_image": `https://assets.htmlacademy.ru/intensives/javascript-3/film/poster/War_of_the_Worlds.jpg`,
+  "preview_image": `https://assets.htmlacademy.ru/intensives/javascript-3/film/preview/war-of-the-worlds.jpg`,
+  "background_image": `https://assets.htmlacademy.ru/intensives/javascript-3/film/background/War_of_the_Worlds.jpg`,
+  "background_color": `#9B7E61`, "description": `As Earth is invaded by alien tripod fighting machines, one family fights for survival.`,
+  "rating": 9.3,
+  "scores_count": 386834,
+  "director": `Steven Spielberg`,
+  "starring": [`Tom Cruise`, `Dakota Fanning`, `Tim Robbins`],
+  "run_time": 116,
+  "genre": `Adventure`,
+  "released": 2005,
+  "id": 1,
+  "is_favorite": false,
+  "video_link": `http://peach.themazzone.com/durian/movies/sintel-1024-surround.mp4`,
+  "preview_video_link": `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`
+};

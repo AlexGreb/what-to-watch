@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Header from '../header/header.jsx';
 import SmallMovieCard from '../movieList/movieList.jsx';
@@ -8,9 +8,13 @@ import {tabs} from '../../constants/consts.js';
 import MoviePageDetails from '../moviePageDetails/moviePageDetails.jsx';
 import MoviePageOverview from '../moviePageOverview/moviepageOverview.jsx';
 import MoviePageReviews from '../moviePageReviews/moviePageReviews.jsx';
+import PlayButton from '../playButton/playButton.jsx';
+import AddMyListButton from '../addMyListButton/addMyListButton.jsx';
+import {Link} from 'react-router-dom';
+import {dataUrl} from '../../constants/consts.js';
 
 
-const MoviePage = ({movie, movies, reviews, activeTab, onChangeActiveTab}) => {
+const MoviePage = ({movie, movies, activeTab, onChangeActiveTab}) => {
   const getTabLinks = () => {
     return Object.values(tabs);
   };
@@ -18,7 +22,7 @@ const MoviePage = ({movie, movies, reviews, activeTab, onChangeActiveTab}) => {
   const tabsMap = {
     [tabs.DETAILS]: <MoviePageDetails movie={movie}/>,
     [tabs.OVERVIEW]: <MoviePageOverview movie={movie}/>,
-    [tabs.REVIEWS]: <MoviePageReviews reviews={reviews}/>
+    [tabs.REVIEWS]: <MoviePageReviews movieId={movie.id}/>
   };
 
   const renderTab = (tabDetails) => {
@@ -41,7 +45,7 @@ const MoviePage = ({movie, movies, reviews, activeTab, onChangeActiveTab}) => {
 
           <h1 className="visually-hidden">WTW</h1>
 
-          <Header/>
+          <Header addClass={`movie-card__head`}/>
 
           <div className="movie-card__wrap">
             <div className="movie-card__desc">
@@ -52,19 +56,9 @@ const MoviePage = ({movie, movies, reviews, activeTab, onChangeActiveTab}) => {
               </p>
 
               <div className="movie-card__buttons">
-                <button className="btn btn--play movie-card__button" type="button">
-                  <svg viewBox="0 0 19 19" width="19" height="19">
-                    <use xlinkHref="#play-s"></use>
-                  </svg>
-                  <span>Play</span>
-                </button>
-                <button className="btn btn--list movie-card__button" type="button">
-                  <svg viewBox="0 0 19 20" width="19" height="20">
-                    <use xlinkHref="#add"></use>
-                  </svg>
-                  <span>My list</span>
-                </button>
-                <a href="add-review.html" className="btn movie-card__button">Add review</a>
+                <PlayButton movieId={movie.id}/>
+                <AddMyListButton movie={movie}/>
+                <Link to={`${dataUrl.REVIEWS}${movie.id}`} className="btn movie-card__button">Add review</Link>
               </div>
             </div>
           </div>

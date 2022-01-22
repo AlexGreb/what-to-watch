@@ -1,19 +1,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const VideoPlayer = ({poster, src, isMute = true, isPlaying, width, height}) => {
+const VideoPlayer = ({poster, src, isMute = true, isPlaying, width, height, delayPlay = 1000, onTimeUpdate = null, onLoadedMetaData = null, preload = `none`}) => {
   let videoRef = React.useRef(null);
   let timeoutPlay = null;
+
   React.useEffect(()=> {
     const video = videoRef.current;
     if (video) {
       video.src = src;
       video.poster = poster;
       video.muted = isMute;
+      video.ontimeupdate = () => {
+        if (onTimeUpdate) {
+          onTimeUpdate(video);
+        }
+      };
+      video.onloadedmetadata = () => {
+        if (onLoadedMetaData) {
+          onLoadedMetaData(video);
+        }
+      };
+
       if (isPlaying) {
         timeoutPlay = setTimeout(() => {
           video.play();
-        }, 1000);
+        }, delayPlay);
       } else {
         if (video.load) {
           video.load();
@@ -22,9 +34,13 @@ const VideoPlayer = ({poster, src, isMute = true, isPlaying, width, height}) => 
       }
     }
     return () => {
-      video.src = ``;
-      video.poster = ``;
-      video.muted = null;
+      if (video) {
+        video.src = ``;
+        video.poster = ``;
+        video.muted = null;
+        video.ontimeupdate = null;
+        video.onloadedmetadata = null;
+      }
       clearTimeout(timeoutPlay);
     };
   }, [isPlaying]);
@@ -36,6 +52,7 @@ const VideoPlayer = ({poster, src, isMute = true, isPlaying, width, height}) => 
       width={width}
       height={height}
       ref={videoRef}
+      preload={preload}
     >
     </video>
   );
@@ -46,8 +63,19 @@ VideoPlayer.propTypes = {
   src: PropTypes.string,
   isMute: PropTypes.bool,
   isPlaying: PropTypes.bool,
-  width: PropTypes.number,
-  height: PropTypes.number
+  width: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+  ]),
+  height: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+  ]),
+  isFullScreen: PropTypes.bool,
+  delayPlay: PropTypes.number,
+  onTimeUpdate: PropTypes.func,
+  onLoadedMetaData: PropTypes.func,
+  preload: PropTypes.string,
 };
 
 export default VideoPlayer;

@@ -32,14 +32,14 @@ exports[`Header Should render correctly header 1`] = `
       class="user-block"
     >
       <div
-        class="user-block__avatar"
+        class="user-block"
       >
-        <img
-          alt="User avatar"
-          height="63"
-          src="img/avatar.jpg"
-          width="63"
-        />
+        <a
+          class="user-block__link"
+          href="sign-in.html"
+        >
+          Sign in
+        </a>
       </div>
     </div>
   </header>

@@ -1,4 +1,5 @@
 export const namespaces = {
   APP: `app`,
-  MOVIES: `movies`
+  MOVIES: `movies`,
+  USER: `user`
 };

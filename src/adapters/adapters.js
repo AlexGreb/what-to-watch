@@ -20,6 +20,17 @@ export const createMovie = (movie) => {
   };
 };
 
+export const createReview = (review) => {
+  return {
+    id: review.id,
+    name: review.user.name,
+    userId: review.user.id,
+    rating: review.rating,
+    date: review.date,
+    comment: review.comment
+  };
+};
+
 const Rating = {
   AWESOME: 10,
   VERY_GOOD: 8,

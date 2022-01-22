@@ -6,6 +6,7 @@ exports[`Video player Should render correctly a video player 1`] = `
     class="player__video"
     height="175"
     poster="https://es31-server.appspot.com/wtw/static/film/preview/pulp-fiction.jpg"
+    preload="none"
     src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
     width="280"
   />

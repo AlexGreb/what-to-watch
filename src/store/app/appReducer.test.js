@@ -19,5 +19,4 @@ describe(`App reducer`, () => {
       shownMoviesNumber: MOVIES_TO_SHOW + MOVIES_TO_SHOW
     });
   });
-
 });

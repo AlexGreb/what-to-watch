@@ -411,6 +411,11 @@ main {
   cursor: pointer;
   -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s; }
+
+  .add-review__btn[disabled] {
+    opacity: 0.3;
+  }
+
   .add-review__btn:hover {
     opacity: 0.5; }
 
@@ -499,6 +504,10 @@ main {
   line-height: 26px;
   color: #DFCF77;
   font-weight: 400; }
+
+  .catalog__empty-text {
+    text-align: center;
+  }
 
 .catalog__genres-list {
   padding: 25px 0;
@@ -977,7 +986,7 @@ main {
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 25px; }
+  margin: 25px; }
 
 .player__controls-row {
   display: -webkit-box;
@@ -1334,6 +1343,7 @@ main {
   margin-left: auto; }
 
 .user-block__avatar {
+  display: block;
   width: 63px;
   height: 63px;
   overflow: hidden;
@@ -1392,3 +1402,9 @@ main {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%); }
+input.invalid {
+  border-color: red;
+}
+input.invalid:focus {
+  border-color: red;
+}
