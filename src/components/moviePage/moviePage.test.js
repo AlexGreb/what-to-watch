@@ -7,7 +7,7 @@ import MoviePage from './moviePage.jsx';
 import {movie, moviesList} from '../../mocks/movies.js';
 import {reviews} from '../../mocks/reviews.js';
 import {createMovie} from '../../adapters/adapters.js';
-import {tabs} from '../../constants/consts.js';
+import {Tabs} from '../../constants/consts.ts';
 import {Provider} from 'react-redux';
 import {store} from '../../store/store.js';
 
@@ -21,7 +21,7 @@ describe(`moviePage`, () => {
     const {asFragment} = render(<Provider store={store}><MoviePage movie={createMovie(movie)}
       movies={moviesList}
       reviews={reviews}
-      activeTab={tabs.OVERVIEW}
+      activeTab={Tabs.OVERVIEW}
       onChangeActiveTab={jest.fn()}
     /></Provider>);
     expect(asFragment()).toMatchSnapshot();

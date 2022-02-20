@@ -3,7 +3,7 @@
  */
 import React from 'react';
 import {render} from '@testing-library/react';
-import Footer from './footer.jsx';
+import Footer from './footer.tsx';
 
 describe(`Footer`, () => {
   it(`Should render correctly footer`, () => {

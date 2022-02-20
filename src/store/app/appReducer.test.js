@@ -1,6 +1,6 @@
-import {setActiveGenre, showMoreMovies} from './appReducer.js';
-import appReducer from './appReducer.js';
-import {MOVIES_TO_SHOW} from '../../constants/consts.js';
+import {setActiveGenre, showMoreMovies} from './appReducer.ts';
+import appReducer from './appReducer.ts';
+import {MOVIES_TO_SHOW} from '../../constants/consts.ts';
 
 describe(`App reducer`, () => {
   it(`The reducer should return the correct genre value`, () => {
