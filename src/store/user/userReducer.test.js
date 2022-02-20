@@ -1,7 +1,7 @@
 import userReducer from './userReducer.js';
 import {setAuth, Operations} from './userReducer.js';
 import MockAdapter from 'axios-mock-adapter';
-import {dataUrl} from '../../constants/consts.js';
+import {AppRoute} from '../../constants/consts.ts';
 import {createApi} from '../../api.js';
 
 const dispatch = jest.fn();
@@ -36,7 +36,7 @@ describe(`userReducer Operations`, () => {
       password: `test`
     };
 
-    apiMock.onPost(dataUrl.LOGIN).reply(200, {
+    apiMock.onPost(AppRoute.LOGIN).reply(200, {
       ...mockUserResponseData
     });
     const action = await Operations.fetchUser(userData);

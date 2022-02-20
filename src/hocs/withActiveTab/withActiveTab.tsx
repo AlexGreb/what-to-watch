@@ -1,16 +1,22 @@
-import React, {useState} from 'react';
-import PropTypes from 'prop-types';
+import React, {useState, ComponentType} from 'react';
 import {useEffect} from 'react';
 import {useLocation, useSearchParams} from 'react-router-dom';
+import {Tabs} from '../../constants/consts'
 
-const withActiveTab = (Component) => {
+type HOCProps = {
+  onChangeActiveTab: (tab: Tabs) => void;
+};
 
-  return function WrappedComponent(props) {
+const withActiveTab = <T extends {activeTab: string}>(Component: ComponentType<T>): ComponentType<Omit<T, keyof HOCProps>> => {
+
+  type ComponentProps = Omit<T, keyof HOCProps>;
+
+  return function WrappedComponent(props:ComponentProps):JSX.Element {
     const {pathname} = useLocation();
     const [params, setSearchParams] = useSearchParams();
     const activeTabName = params.get(`tab`) || props.activeTab;
     const [activeTab, setActiveTab] = useState(activeTabName);
-    const changeTabHandler = (tab) => {
+    const changeTabHandler = (tab: Tabs):void => {
       setActiveTab(tab);
       setSearchParams({tab});
     };
@@ -19,11 +25,8 @@ const withActiveTab = (Component) => {
       setActiveTab(activeTabName);
     }, [pathname]);
 
-    WrappedComponent.propTypes = {
-      activeTab: PropTypes.string
-    };
     return (
-      <Component {...props}
+      <Component {...props as T}
         activeTab={activeTab}
         onChangeActiveTab={changeTabHandler}/>
     );

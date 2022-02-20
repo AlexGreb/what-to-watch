@@ -1,32 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Header from '../header/header.jsx';
+import Header from '../header/header.tsx';
 import SmallMovieCard from '../movieList/movieList.jsx';
-import Footer from '../footer/footer.jsx';
-import Tabs from '../tabs/tabs.jsx';
-import {tabs} from '../../constants/consts.js';
+import Footer from '../footer/footer.tsx';
+import {default as TabsComponent} from '../Tabs/Tabs.jsx';
+import {Tabs} from '../../constants/consts.ts';
 import MoviePageDetails from '../moviePageDetails/moviePageDetails.jsx';
 import MoviePageOverview from '../moviePageOverview/moviepageOverview.jsx';
 import MoviePageReviews from '../moviePageReviews/moviePageReviews.jsx';
 import PlayButton from '../playButton/playButton.jsx';
 import AddMyListButton from '../addMyListButton/addMyListButton.jsx';
 import {Link} from 'react-router-dom';
-import {dataUrl} from '../../constants/consts.js';
+import {AppRoute} from '../../constants/consts.ts';
 
 
 const MoviePage = ({movie, movies, activeTab, onChangeActiveTab}) => {
   const getTabLinks = () => {
-    return Object.values(tabs);
+    return Object.values(Tabs);
   };
 
-  const tabsMap = {
-    [tabs.DETAILS]: <MoviePageDetails movie={movie}/>,
-    [tabs.OVERVIEW]: <MoviePageOverview movie={movie}/>,
-    [tabs.REVIEWS]: <MoviePageReviews movieId={movie.id}/>
+  const TabsMap = {
+    [Tabs.DETAILS]: <MoviePageDetails movie={movie}/>,
+    [Tabs.OVERVIEW]: <MoviePageOverview movie={movie}/>,
+    [Tabs.REVIEWS]: <MoviePageReviews movieId={movie.id}/>
   };
 
   const renderTab = (tabDetails) => {
-    return tabsMap[tabDetails];
+    return TabsMap[tabDetails];
   };
 
   const getSimilarMovies = (moviesList) => {
@@ -58,7 +58,7 @@ const MoviePage = ({movie, movies, activeTab, onChangeActiveTab}) => {
               <div className="movie-card__buttons">
                 <PlayButton movieId={movie.id}/>
                 <AddMyListButton movie={movie}/>
-                <Link to={`${dataUrl.REVIEWS}${movie.id}`} className="btn movie-card__button">Add review</Link>
+                <Link to={`${AppRoute.REVIEWS}${movie.id}`} className="btn movie-card__button">Add review</Link>
               </div>
             </div>
           </div>
@@ -71,7 +71,7 @@ const MoviePage = ({movie, movies, activeTab, onChangeActiveTab}) => {
             </div>
 
             <div className="movie-card__desc">
-              <Tabs tabNavs={getTabLinks()}
+              <TabsComponent tabNavs={getTabLinks()}
                 tabDetails={renderTab(activeTab)}
                 activeTab={activeTab}
                 onChangeActiveTab={onChangeActiveTab}
