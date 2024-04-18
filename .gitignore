@@ -3,3 +3,8 @@ client/public/bundle.js.map
 node_modules
 sintel-1024-surround.mp4
 /server/dist/
+/.idea/codeStyles/codeStyleConfig.xml
+/.idea/modules.xml
+/.idea/codeStyles/Project.xml
+/.idea/inspectionProfiles/Project_Default.xml
+/.idea/vcs.xml
