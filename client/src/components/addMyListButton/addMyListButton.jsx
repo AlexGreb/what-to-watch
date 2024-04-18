@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '../button/button.jsx';
+import Button from '../button/button.tsx';
 import PropTypes from 'prop-types';
 import {Operations} from '../../store/movies/moviesReducer.js';
 import {useDispatch} from 'react-redux';

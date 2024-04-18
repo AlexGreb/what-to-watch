@@ -5,7 +5,7 @@
 import React from 'react';
 import Enzyme, {mount} from 'enzyme';
 import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
-import withActiveCard from './withActiveCard.js';
+import withActiveCard from './withActiveCard.tsx';
 import {act} from 'react-dom/test-utils';
 
 Enzyme.configure({adapter: new Adapter()});

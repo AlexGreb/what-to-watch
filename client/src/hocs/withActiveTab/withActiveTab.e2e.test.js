@@ -5,8 +5,8 @@
 import React from 'react';
 import Enzyme, {mount} from 'enzyme';
 import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
-import withActiveTab from './withActiveTab.js';
-import {tabs} from '../../constants/consts.js';
+import withActiveTab from './withActiveTab.tsx';
+import {Tabs} from '../../constants/consts.ts';
 import {act} from 'react-dom/test-utils';
 
 
@@ -17,12 +17,12 @@ describe(`WithActiveTab HOC`, () => {
 
     const EmptyComponent = () => null;
     const WithActiveTab = withActiveTab((props) => <EmptyComponent {...props} />);
-    let wrapper = mount(<WithActiveTab activeTab={tabs.OVERVIEW}/>);
+    let wrapper = mount(<WithActiveTab activeTab={Tabs.OVERVIEW}/>);
 
-    expect(wrapper.find(EmptyComponent).props().activeTab).toBe(tabs.OVERVIEW);
-    act(() => wrapper.find(EmptyComponent).props().onChangeActiveTab(tabs.DETAILS));
+    expect(wrapper.find(EmptyComponent).props().activeTab).toBe(Tabs.OVERVIEW);
+    act(() => wrapper.find(EmptyComponent).props().onChangeActiveTab(Tabs.DETAILS));
     wrapper = wrapper.update();
-    expect(wrapper.find(EmptyComponent).props().activeTab).toBe(tabs.DETAILS);
+    expect(wrapper.find(EmptyComponent).props().activeTab).toBe(Tabs.DETAILS);
   });
 
 });

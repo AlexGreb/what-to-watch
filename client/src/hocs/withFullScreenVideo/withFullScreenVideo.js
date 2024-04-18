@@ -1,9 +1,24 @@
-import React, {useState, useRef, useEffect} from 'react';
-import PropTypes from 'prop-types';
+import React, {useState, useRef, useEffect, ComponentType} from 'react';
+import {Movie} from '../../types/movie';
 
-const withFullScreenVideo = (Component) => {
-  const WrappedComponent = (props) => {
-    const _videoref = useRef(null);
+type HOCProps = {
+  isPlaying: boolean;
+  progress: number;
+  duration: number;
+  onPlayButtonClick: () => void;
+  onFullScreenButtonClick: () => void;
+  onProgressBarClick: (e: React.MouseEvent<HTMLElement>) => void;
+}
+
+type ComponentProps = {
+  movie: Movie;
+}
+
+const withFullScreenVideo = <T extends ComponentProps>(Component: ComponentType<T>): ComponentType<Omit<T, keyof HOCProps>> => {
+  type ComponentProps = Omit<T, keyof HOCProps>
+  
+  return function WrappedComponent(props: ComponentProps): JSX.Element {
+    const _videoref = useRef<HTMLVideoElement>(null);
     const {movie} = props;
     const [isPlaying, setPlaying] = useState(true);
     const [duration, setDuration] = useState(0);
@@ -55,16 +70,19 @@ const withFullScreenVideo = (Component) => {
       video.requestFullscreen();
     };
 
-    const clickProgressBarHandler = (e) => {
-      const progressBarCoords = e.target.getBoundingClientRect();
-      const clickedValue = Math.ceil((e.screenX - progressBarCoords.left) * e.target.max / e.target.offsetWidth);
+    const clickProgressBarHandler = (e: React.MouseEvent<HTMLElement>) => {
+      const target = e.target as HTMLProgressElement;
+      const progressBarCoords: DOMRect = target.getBoundingClientRect();
+      const max: number = target.max;
+      const offsetWidth: number = target.offsetWidth;
+      const clickedValue = Math.ceil((e.screenX - progressBarCoords.left) * max / offsetWidth);
       const video = _videoref.current;
       video.currentTime = clickedValue;
     };
 
     return (
       <Component
-        {...props}
+        {...props as T}
         movie={movie}
         isPlaying={isPlaying}
         progress={progress}
@@ -73,23 +91,18 @@ const withFullScreenVideo = (Component) => {
         onFullScreenButtonClick={clickFullScreenButtonHandler}
         onProgressBarClick={clickProgressBarHandler}
       >
-        <video
-          onClick={clickPlayButtonHandler}
+        <video onClick={clickPlayButtonHandler}
           ref={_videoref}
           src={movie.videoLink}
           poster={movie.poster}
           width="100%"
           preload="metadata"
-        />
+        >
+        </video>
       </Component>
     );
   };
 
-  WrappedComponent.propTypes = {
-    movie: PropTypes.object
-  };
-
-  return WrappedComponent;
 };
 
 export default withFullScreenVideo;

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Tabs Should render correctly tabs 1`] = `
+exports[`Tabs Should render correctly Tabs 1`] = `
 <DocumentFragment>
   <nav
     class="movie-nav movie-card__nav"

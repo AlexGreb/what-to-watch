@@ -1,11 +1,11 @@
 import {createSlice, createAsyncThunk} from '@reduxjs/toolkit';
-import {namespaces} from '../namespaces';
-import {dataUrl} from '../../constants/consts';
-import {authorizationStatus} from '../../constants/consts.js';
+import {Namespaces} from '../storeNamespaces';
+import {AppRoute} from '../../constants/consts';
+import {AuthorizationStatus} from '../../constants/consts.ts';
 
 const initialState = {
   isAuthorizationRequired: false,
-  authStatus: authorizationStatus.NO_AUTH,
+  authStatus: AuthorizationStatus.NO_AUTH,
   user: {
     email: ``,
     name: ``,
@@ -16,31 +16,31 @@ const initialState = {
 
 const Operations = {
   fetchUser: createAsyncThunk(
-      `${namespaces.USER}/fetchUser`,
+      `${Namespaces.USER}/fetchUser`,
       async (dataUser, {dispatch, extra, rejectWithValue, fulfillWithValue}) => {
         try {
-          const response = await extra.post(dataUrl.LOGIN, dataUser);
-          dispatch(userSlice.actions.setAuthorizationStatus(authorizationStatus.AUTH));
+          const response = await extra.post(AppRoute.LOGIN, dataUser);
+          dispatch(userSlice.actions.setAuthorizationStatus(AuthorizationStatus.AUTH));
           return fulfillWithValue(response.data);
         } catch (e) {
           return rejectWithValue(true);
         }
       }),
   checkAuth: createAsyncThunk(
-      `${namespaces.USER}/checkAuth`,
+      `${Namespaces.USER}/checkAuth`,
       async (_, {dispatch, extra, rejectWithValue, fulfillWithValue}) => {
         try {
-          const response = await extra.get(dataUrl.LOGIN);
-          dispatch(userSlice.actions.setAuthorizationStatus(authorizationStatus.AUTH));
+          const response = await extra.get(AppRoute.LOGIN);
+          dispatch(userSlice.actions.setAuthorizationStatus(AuthorizationStatus.AUTH));
           return fulfillWithValue(response.data);
         } catch (e) {
-          return rejectWithValue(authorizationStatus.NO_AUTH);
+          return rejectWithValue(AuthorizationStatus.NO_AUTH);
         }
       })
 };
 
 const userSlice = createSlice({
-  name: namespaces.USER,
+  name: Namespaces.USER,
   initialState,
   reducers: {
     setAuth: (state, action) => {

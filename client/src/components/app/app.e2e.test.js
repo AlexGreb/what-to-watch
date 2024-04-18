@@ -5,8 +5,8 @@ import App from './app.jsx';
 import {moviesList} from '../../mocks/movies.js';
 import {Provider} from 'react-redux';
 import {createStore} from 'redux';
-import appReducer from '../../store/app/appReducer.js';
-import {initialState} from '../../store/app/appReducer.js';
+import appReducer from '../../store/app/appReducer.ts';
+import {initialState} from '../../store/app/appReducer.ts';
 
 Enzyme.configure({adapter: new Adapter()});
 

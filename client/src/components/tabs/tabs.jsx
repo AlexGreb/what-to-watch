@@ -16,7 +16,7 @@ const Tabs = ({tabNavs, tabDetails, activeTab, onChangeActiveTab}) => {
             tabNavs.map((it, index) => {
               return (
                 <li className={`movie-nav__item${it === activeTab ? ` movie-nav__item--active` : ``}`}
-                  key={`tabs-${index}`}>
+                  key={`Tabs-${index}`}>
                   <a href="#"
                     onClick={(e) => changeActiveTabHandler(e, it)}
                     className="movie-nav__link">{it}</a>

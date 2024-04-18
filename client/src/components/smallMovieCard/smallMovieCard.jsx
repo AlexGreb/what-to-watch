@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import VideoPlayer from '../videoPlayer/videoPlayer.jsx';
 import {useNavigate} from 'react-router-dom';
-import {dataUrl} from '../../constants/consts.js';
+import {AppRoute} from '../../constants/consts.ts';
 
 const SmallMovieCard = ({movie, onMouseEnter, onMouseLeave, isPlaying}) => {
   const navigator = useNavigate();
   const toMovie = () => {
-    navigator(`${dataUrl.FILMS}${movie.id}`);
+    navigator(`${AppRoute.FILMS}${movie.id}`);
   };
 
   return (

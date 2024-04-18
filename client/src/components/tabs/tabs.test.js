@@ -3,13 +3,13 @@
  */
 import React from 'react';
 import {render} from '@testing-library/react';
-import Tabs from './tabs.jsx';
-import {tabs} from '../../constants/consts.js';
+import Tabs from './Tabs.jsx';
+import {Tabs} from '../../constants/consts.ts';
 
 describe(`Tabs`, () => {
-  it(`Should render correctly tabs`, () => {
+  it(`Should render correctly Tabs`, () => {
     const tabDetails = () => <div></div>;
-    const {asFragment} = render(<Tabs tabNavs={Object.values(tabs)}
+    const {asFragment} = render(<Tabs tabNavs={Object.values(Tabs)}
       onChangeActiveTab={jest.fn()}
       tabDetails={tabDetails()}
     />);

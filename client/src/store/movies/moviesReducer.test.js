@@ -2,7 +2,7 @@
 import {Operations} from './moviesReducer.js';
 import moviesReducer from './moviesReducer.js';
 import MockAdapter from 'axios-mock-adapter';
-import {dataUrl} from '../../constants/consts.js';
+import {AppRoute} from '../../constants/consts.ts';
 import {moviesList, promoMovie, reviews} from '../../mocks/movies.js';
 import {createMovie, createReview} from '../../adapters/adapters.js';
 import {createApi} from '../../api.js';
@@ -26,7 +26,7 @@ describe(`MoviesReducer Operations`, () => {
     const initialState = {
       promoMovie: {}
     };
-    apiMock.onGet(dataUrl.PROMO).reply(200, {
+    apiMock.onGet(AppRoute.PROMO).reply(200, {
       ...promoMovie
     });
     const action = await Operations.fetchPromoMovie();
@@ -40,7 +40,7 @@ describe(`MoviesReducer Operations`, () => {
       moviesList: []
     };
     const mockMoviesList = moviesList.map(createMovie);
-    apiMock.onGet(dataUrl.FILMS).reply(200, [
+    apiMock.onGet(AppRoute.FILMS).reply(200, [
       ...moviesList
     ]);
     const action = await Operations.fetchMoviesList();
@@ -54,7 +54,7 @@ describe(`MoviesReducer Operations`, () => {
       reviews: []
     };
     const mockReviewsList = reviews.map(createReview);
-    apiMock.onGet(dataUrl.REVIEWS).reply(200, [
+    apiMock.onGet(AppRoute.REVIEWS).reply(200, [
       ...reviews
     ]);
     const action = await Operations.fetchReviews(reviews[0].id);
