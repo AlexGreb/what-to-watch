@@ -2,7 +2,7 @@ import {configureStore} from '@reduxjs/toolkit';
 import appReducer from './app/appReducer';
 import moviesReducer from './movies/moviesReducer.js';
 import userReducer from './user/userReducer.js';
-import {Namespaces} from './storeNamespaces';
+import {namespaces} from './namespaces';
 import {createApi} from '../api.js';
 
 
@@ -10,9 +10,9 @@ const api = createApi((...args) => store.dispatch(...args));
 
 export const store = configureStore({
   reducer: {
-    [Namespaces.APP]: appReducer,
-    [Namespaces.MOVIES]: moviesReducer,
-    [Namespaces.USER]: userReducer
+    [namespaces.APP]: appReducer,
+    [namespaces.MOVIES]: moviesReducer,
+    [namespaces.USER]: userReducer
   },
   middleware: (getDefaultMiddleware) => {
     return getDefaultMiddleware({
@@ -26,4 +26,4 @@ export const store = configureStore({
   // devTools: process.env.NODE_ENV !== `production`,
 });
 
-export type State = ReturnType<typeof store.getState>
+// export type State = ReturnType<typeof store.getState>

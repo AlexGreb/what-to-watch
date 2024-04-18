@@ -1,9 +1,9 @@
 import {createSlice, createAsyncThunk, PayloadAction} from '@reduxjs/toolkit';
 import {MOVIES_TO_SHOW} from '../../constants/consts';
-import {Namespaces} from '../storeNamespaces';
+import {namespaces} from '../namespaces';
 import {Operations as MovieOperations} from '../movies/moviesReducer.js';
 import {Operations as UserOperations} from '../user/userReducer.js';
-import {State} from '../store';
+// import {State} from '../store';
 
 const initialState = {
   currentGenre: `All genres`,
@@ -14,7 +14,7 @@ const initialState = {
 
 const Operations = {
   fetchData: createAsyncThunk(
-      `${Namespaces.APP}/fetchData`,
+      `${namespaces.APP}/fetchData`,
       async (_, {dispatch, fulfillWithValue}) => {
         await dispatch(MovieOperations.fetchMoviesList());
         await dispatch(MovieOperations.fetchPromoMovie());
@@ -25,13 +25,13 @@ const Operations = {
 
 
 const appSlice = createSlice({
-  name: Namespaces.APP,
+  name: namespaces.APP,
   initialState,
   reducers: {
-    setActiveGenre: (state, action: PayloadAction<string>) => {
+    setActiveGenre: (state, action) => {
       state.currentGenre = action.payload;
     },
-    showMoreMovies: (state, action: PayloadAction<number>) => {
+    showMoreMovies: (state, action) => {
       state.shownMoviesNumber = state.shownMoviesNumber + action.payload;
     },
     resetShownMoviesNumber: (state) => {
@@ -39,7 +39,7 @@ const appSlice = createSlice({
     }
   },
   extraReducers: {
-    [Operations.fetchData.fulfilled.type]: (state, action: PayloadAction<boolean>) => {
+    [Operations.fetchData.fulfilled.type]: (state, action) => {
       state.isLoading = action.payload;
     },
     [Operations.fetchData.pending.type]: (state) => {

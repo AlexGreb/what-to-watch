@@ -2,7 +2,7 @@ import React from 'react';
 import {useDispatch} from 'react-redux';
 import {Operations} from '../../store/user/userReducer';
 import {useForm} from 'react-hook-form';
-import Header from '../header/header.tsx';
+import Header from '../header/header.jsx';
 
 const SignIn = () => {
   const headerTitle = <h1 className="page-title user-page__title">Sign in</h1>;

@@ -1,28 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Header from '../header/header.tsx';
+import Header from '../header/header.jsx';
 import SmallMovieCard from '../movieList/movieList.jsx';
-import Footer from '../footer/footer.tsx';
+import Footer from '../footer/footer.jsx';
 import {default as TabsComponent} from '../Tabs/Tabs.jsx';
-import {Tabs} from '../../constants/consts.ts';
+import {tabs} from '../../constants/consts.js';
 import MoviePageDetails from '../moviePageDetails/moviePageDetails.jsx';
 import MoviePageOverview from '../moviePageOverview/moviePageOverview.jsx';
 import MoviePageReviews from '../moviePageReviews/moviePageReviews.jsx';
 import PlayButton from '../playButton/playButton.jsx';
 import AddMyListButton from '../addMyListButton/addMyListButton.jsx';
 import {Link} from 'react-router-dom';
-import {AppRoute} from '../../constants/consts.ts';
+import {dataUrl} from '../../constants/consts.js';
 
 
 const MoviePage = ({movie, movies, activeTab, onChangeActiveTab}) => {
   const getTabLinks = () => {
-    return Object.values(Tabs);
+    return Object.values(tabs);
   };
 
   const TabsMap = {
-    [Tabs.DETAILS]: <MoviePageDetails movie={movie}/>,
-    [Tabs.OVERVIEW]: <MoviePageOverview movie={movie}/>,
-    [Tabs.REVIEWS]: <MoviePageReviews movieId={movie.id}/>
+    [tabs.DETAILS]: <MoviePageDetails movie={movie}/>,
+    [tabs.OVERVIEW]: <MoviePageOverview movie={movie}/>,
+    [tabs.REVIEWS]: <MoviePageReviews movieId={movie.id}/>
   };
 
   const renderTab = (tabDetails) => {
@@ -58,7 +58,7 @@ const MoviePage = ({movie, movies, activeTab, onChangeActiveTab}) => {
               <div className="movie-card__buttons">
                 <PlayButton movieId={movie.id}/>
                 <AddMyListButton movie={movie}/>
-                <Link to={`${AppRoute.REVIEWS}${movie.id}`} className="btn movie-card__button">Add review</Link>
+                <Link to={`${dataUrl.REVIEWS}${movie.id}`} className="btn movie-card__button">Add review</Link>
               </div>
             </div>
           </div>

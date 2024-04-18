@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Button from '../button/button.tsx';
-import {VIDEO_PROGRESS} from '../../constants/consts.ts';
+import Button from '../button/button.jsx';
+import {VIDEO_PROGRESS} from '../../constants/consts.js';
 import history from '../../history.js';
 
 const FullScreenVideoPlayer = ({onPlayButtonClick, onFullScreenButtonClick, onProgressBarClick, children, movie, isPlaying, progress, duration}) => {

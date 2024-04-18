@@ -1,12 +1,12 @@
 import {useEffect} from 'react';
 import {Operations} from '../store/movies/moviesReducer.js';
 import {useSelector, useDispatch} from 'react-redux';
-import {Namespaces} from '../store/storeNamespaces';
+import {namespaces} from '../store/namespaces';
 
 const useReviews = () => {
   const dispatch = useDispatch();
-  const myMoviesList = useSelector((state) => state[Namespaces.MOVIES].myListMovies);
-  const loading = useSelector((state) => state[Namespaces.MOVIES].loadingMyMovies);
+  const myMoviesList = useSelector((state) => state[namespaces.MOVIES].myListMovies);
+  const loading = useSelector((state) => state[namespaces.MOVIES].loadingMyMovies);
   useEffect(() => {
     dispatch(Operations.fetchMyListMovies());
   }, []);

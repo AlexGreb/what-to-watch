@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../header/header.tsx';
+import Header from '../header/header.jsx';
 import AddReviewForm from '../addReviewForm/addReviewForm.jsx';
 import PropTypes from 'prop-types';
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import SmallMovieCard from '../smallMovieCard/smallMovieCard.jsx';
 import PropTypes from 'prop-types';
-import withActiveCard from '../../hocs/withActiveCard/withActiveCard.tsx';
+import withActiveCard from '../../hocs/withActiveCard/withActiveCard.jsx';
 
 const WrappedSmallMovieCard = withActiveCard(SmallMovieCard);
 const MovieList = ({moviesList}) => {

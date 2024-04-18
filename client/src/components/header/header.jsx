@@ -1,20 +1,16 @@
 import React from 'react';
 import {useSelector} from 'react-redux';
-import {Namespaces} from '../../store/storeNamespaces';
-import {AuthorizationStatus, AppRoute} from '../../constants/consts';
-import {Link, RouteProps} from 'react-router-dom';
+import {namespaces} from '../../store/namespaces';
+import {authorizationStatus, dataUrl} from '../../constants/consts';
+import {Link} from 'react-router-dom';
 
-type HeaderProps = {
-  title: JSX.Element | string;
-  addClass: string
-}
 
-const Header = ({title, addClass}: HeaderProps): JSX.Element => {
-  const AuthorizationStatusString:AuthorizationStatus  = useSelector((state) => state[Namespaces.USER].authStatus);
-  const isAuthBlock = ():JSX.Element | null  => {
-    if (AuthorizationStatusString === AuthorizationStatus.AUTH) {
+const Header = ({title, addClass})=> {
+  const AuthorizationStatusString = useSelector((state) => state[namespaces.USER].authStatus);
+  const isAuthBlock = () => {
+    if (AuthorizationStatusString === authorizationStatus.AUTH) {
       return (
-        <Link to={AppRoute.FAVORITE} className="user-block__avatar">
+        <Link to={dataUrl.FAVORITE} className="user-block__avatar">
           <img src="img/avatar.jpg" alt="User avatar" width="63" height="63" />
         </Link>
       );
@@ -24,7 +20,7 @@ const Header = ({title, addClass}: HeaderProps): JSX.Element => {
   return (
     <header className={`page-header${addClass != null ? ` ${addClass}` : ``}`}>
       <div className="logo">
-        <Link to={AppRoute.HOME} className="logo__link">
+        <Link to={dataUrl.HOME} className="logo__link">
           <span className="logo__letter logo__letter--1">W</span>
           <span className="logo__letter logo__letter--2">T</span>
           <span className="logo__letter logo__letter--3">W</span>

@@ -1,24 +1,9 @@
-import React, {useState, useRef, useEffect, ComponentType} from 'react';
-import {Movie} from '../../types/movie';
+import React, {useState, useRef, useEffect} from 'react';
 
-type HOCProps = {
-  isPlaying: boolean;
-  progress: number;
-  duration: number;
-  onPlayButtonClick: () => void;
-  onFullScreenButtonClick: () => void;
-  onProgressBarClick: (e: React.MouseEvent<HTMLElement>) => void;
-}
+const withFullScreenVideo = (Component) => {
 
-type ComponentProps = {
-  movie: Movie;
-}
-
-const withFullScreenVideo = <T extends ComponentProps>(Component: ComponentType<T>): ComponentType<Omit<T, keyof HOCProps>> => {
-  type ComponentProps = Omit<T, keyof HOCProps>
-  
-  return function WrappedComponent(props: ComponentProps): JSX.Element {
-    const _videoref = useRef<HTMLVideoElement>(null);
+  return function WrappedComponent(props) {
+    const _videoref = useRef(null);
     const {movie} = props;
     const [isPlaying, setPlaying] = useState(true);
     const [duration, setDuration] = useState(0);
@@ -70,11 +55,11 @@ const withFullScreenVideo = <T extends ComponentProps>(Component: ComponentType<
       video.requestFullscreen();
     };
 
-    const clickProgressBarHandler = (e: React.MouseEvent<HTMLElement>) => {
-      const target = e.target as HTMLProgressElement;
-      const progressBarCoords: DOMRect = target.getBoundingClientRect();
-      const max: number = target.max;
-      const offsetWidth: number = target.offsetWidth;
+    const clickProgressBarHandler = (e) => {
+      const target = e.target;
+      const progressBarCoords = target.getBoundingClientRect();
+      const max = target.max;
+      const offsetWidth = target.offsetWidth;
       const clickedValue = Math.ceil((e.screenX - progressBarCoords.left) * max / offsetWidth);
       const video = _videoref.current;
       video.currentTime = clickedValue;
@@ -82,7 +67,7 @@ const withFullScreenVideo = <T extends ComponentProps>(Component: ComponentType<
 
     return (
       <Component
-        {...props as T}
+        {...props}
         movie={movie}
         isPlaying={isPlaying}
         progress={progress}

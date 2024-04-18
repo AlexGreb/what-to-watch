@@ -1,7 +1,7 @@
 import React from 'react';
 import MovieCard from '../movieCard/movieCard.jsx';
 import Catalog from '../catalog/catalog.jsx';
-import Footer from '../footer/footer.tsx';
+import Footer from '../footer/footer.jsx';
 import PropTypes from 'prop-types';
 const Main = () => {
   return (

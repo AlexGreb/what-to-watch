@@ -1,12 +1,12 @@
 import React from 'react';
-import Header from '../header/header.tsx';
+import Header from '../header/header.jsx';
 import {useSelector} from 'react-redux';
-import {Namespaces} from '../../store/storeNamespaces.ts';
+import {namespaces} from '../../store/namespaces.js';
 import PlayButton from '../playButton/playButton.jsx';
 import AddMyListButton from '../addMyListButton/addMyListButton.jsx';
 
 const MovieCard = () => {
-  const promoMovie = useSelector((state) => state[Namespaces.MOVIES].promoMovie);
+  const promoMovie = useSelector((state) => state[namespaces.MOVIES].promoMovie);
 
   return (
     <section className="movie-card">

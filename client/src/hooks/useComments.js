@@ -2,8 +2,8 @@ import {useState, useEffect} from 'react';
 import {Operations, setSendingReviewStatus} from '../store/movies/moviesReducer.js';
 import {useDispatch, useSelector} from 'react-redux';
 import {useNavigate} from 'react-router-dom';
-import {AppRoute, Tabs} from '../constants/consts.ts';
-import {Namespaces} from '../store/storeNamespaces.ts';
+import {dataUrl, tabs} from '../constants/consts.js';
+import {namespaces} from '../store/namespaces.js';
 
 const isValidationReviewForm = (formData) => {
   let isValid = true;
@@ -18,7 +18,7 @@ const isValidationReviewForm = (formData) => {
 };
 
 const useComments = (movieId, ref) => {
-  const sendingReviewStatus = useSelector((state) => state[Namespaces.MOVIES].sendingReviewStatus);
+  const sendingReviewStatus = useSelector((state) => state[namespaces.MOVIES].sendingReviewStatus);
   const navigator = useNavigate();
   const dispatch = useDispatch();
   const [reviewData, changeReviewData] = useState({});
@@ -27,7 +27,7 @@ const useComments = (movieId, ref) => {
 
   useEffect(() => {
     if (sendingReviewStatus) {
-      navigator(`${AppRoute.FILMS}${movieId}?tab=${Tabs.REVIEWS}`);
+      navigator(`${dataUrl.FILMS}${movieId}?tab=${tabs.REVIEWS}`);
       dispatch(setSendingReviewStatus(false));
     }
   }, [sendingReviewStatus]);

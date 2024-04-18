@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {BASE_URL, API_TIMEOUT, Errors, AppRoute} from './constants/consts.ts';
+import {BASE_URL, API_TIMEOUT, Errors, dataUrl} from './constants/consts.js';
 import Toast, {typesIcons} from "./toast/toast.js";
 import history from './history.js';
 
@@ -18,7 +18,7 @@ export const createApi = () => {
   const onFail = (err) => {
     const {response} = err;
     if (response.status === Errors.UNAUTHORIZED) {
-      history.push(AppRoute.LOGIN);
+      history.push(dataUrl.LOGIN);
       throw err;
     }
     Toast.fire({

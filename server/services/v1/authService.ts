@@ -4,8 +4,10 @@ import jwt from "jsonwebtoken";
 
 
 type SecretKey = string;
+type Email = Pick<IUser, 'email'>
+
 export const getAccessToken = (user: IUser) => {
-    const payload: Omit<IUser, 'password'> = {
+    const payload: Email = {
         email: user.email
     }
     const secretKey: SecretKey = config.get<SecretKey>('secret');
@@ -13,7 +15,7 @@ export const getAccessToken = (user: IUser) => {
 }
 
 export const getRefreshToken = (user: IUser) => {
-    const payload: Omit<IUser, 'password'> = {
+    const payload: Email = {
         email: user.email
     }
     const secretKey: SecretKey = config.get<SecretKey>('secret');

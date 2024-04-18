@@ -1,11 +1,10 @@
 import {createSlice, createAsyncThunk} from '@reduxjs/toolkit';
-import {Namespaces} from '../storeNamespaces';
-import {AppRoute} from '../../constants/consts';
-import {AuthorizationStatus} from '../../constants/consts.ts';
+import {namespaces} from '../namespaces';
+import {authorizationStatus, dataUrl} from '../../constants/consts';
 
 const initialState = {
   isAuthorizationRequired: false,
-  authStatus: AuthorizationStatus.NO_AUTH,
+  authStatus: authorizationStatus.NO_AUTH,
   user: {
     email: ``,
     name: ``,
@@ -16,31 +15,31 @@ const initialState = {
 
 const Operations = {
   fetchUser: createAsyncThunk(
-      `${Namespaces.USER}/fetchUser`,
+      `${namespaces.USER}/fetchUser`,
       async (dataUser, {dispatch, extra, rejectWithValue, fulfillWithValue}) => {
         try {
-          const response = await extra.post(AppRoute.LOGIN, dataUser);
-          dispatch(userSlice.actions.setAuthorizationStatus(AuthorizationStatus.AUTH));
+          const response = await extra.post(dataUrl.LOGIN, dataUser);
+          dispatch(userSlice.actions.setAuthorizationStatus(authorizationStatus.AUTH));
           return fulfillWithValue(response.data);
         } catch (e) {
           return rejectWithValue(true);
         }
       }),
   checkAuth: createAsyncThunk(
-      `${Namespaces.USER}/checkAuth`,
+      `${namespaces.USER}/checkAuth`,
       async (_, {dispatch, extra, rejectWithValue, fulfillWithValue}) => {
         try {
-          const response = await extra.get(AppRoute.LOGIN);
-          dispatch(userSlice.actions.setAuthorizationStatus(AuthorizationStatus.AUTH));
+          const response = await extra.get(dataUrl.LOGIN);
+          dispatch(userSlice.actions.setAuthorizationStatus(authorizationStatus.AUTH));
           return fulfillWithValue(response.data);
         } catch (e) {
-          return rejectWithValue(AuthorizationStatus.NO_AUTH);
+          return rejectWithValue(authorizationStatus.NO_AUTH);
         }
       })
 };
 
 const userSlice = createSlice({
-  name: Namespaces.USER,
+  name: namespaces.USER,
   initialState,
   reducers: {
     setAuth: (state, action) => {

@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react';
 import {Operations} from '../store/movies/moviesReducer';
 import {useSelector, useDispatch} from 'react-redux';
-import {Namespaces} from '../store/storeNamespaces';
+import {namespaces} from '../store/namespaces';
 
 const useReviews = (movieId) => {
   const dispatch = useDispatch();
@@ -12,7 +12,7 @@ const useReviews = (movieId) => {
     });
   }, [dispatch, movieId]);
 
-  const reviews = useSelector((state) => state[Namespaces.MOVIES].reviews);
+  const reviews = useSelector((state) => state[namespaces.MOVIES].reviews);
   return {
     reviews,
     isLoading
