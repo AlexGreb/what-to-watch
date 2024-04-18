@@ -25,7 +25,7 @@ export const getPromo = async (): Promise<IMovie | null> =>{
     }
 }
 
-export const getComments = async (): Promise<> => {
+export const getComments = async () => {
     try {
         return await db.getComments();
     } catch (error) {

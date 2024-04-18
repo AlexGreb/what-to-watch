@@ -1,5 +1,5 @@
 import type {Request, Response} from "express";
-import {IUser} from "../../Models/user";
+import {IUser, ILoginData} from "../../Models/user";
 import {getUser, saveUser} from "../../services/v1/userService"
 import {getResError} from "../../utils";
 import bcrypt from "bcrypt";
@@ -66,7 +66,7 @@ export const login = async (req: Request<IUser>, res: Response) => {
     }
 
     const {email, password} = req.body;
-    const user: IUser = {
+    const user: ILoginData = {
         email,
         password
     }

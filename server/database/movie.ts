@@ -28,7 +28,7 @@ export const getPromo = async (): Promise<IMovie | null> =>{
 
 export const getComments = async () => {
     try {
-        return await
+        // return await
     } catch (error) {
         throw { status: 500, message: error }
     }

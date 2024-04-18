@@ -7,6 +7,11 @@ export interface IUser {
 }
 
 
+export interface ILoginData {
+    email:string;
+    password: string;
+}
+
 const userScheme = new Schema({
     email: {type: String, unique: true, required: true},
     password: {type: String, required: true},

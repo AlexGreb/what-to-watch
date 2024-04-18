@@ -2,7 +2,9 @@ import {UserModel, type IUser} from '../Models/user';
 import type mongodb from 'mongodb';
 import mongoose from "mongoose";
 
-export const getUser = async (user: IUser): Promise<IUser | null> => {
+type UserData = Pick<IUser, 'email'>;
+
+export const getUser = async (user: UserData): Promise<IUser | null> => {
     try {
         return await UserModel.findOne({
             email: user.email
@@ -12,7 +14,7 @@ export const getUser = async (user: IUser): Promise<IUser | null> => {
     }
 }
 
-export const saveUser = async (user: IUser): Promise<IUser> => {
+export const saveUser = async (user: UserData): Promise<IUser> => {
     try {
         const userData = new UserModel(user);
         return await userData.save();

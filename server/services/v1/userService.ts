@@ -1,8 +1,8 @@
-import {IUser} from "../../Models/user";
+import {ILoginData, IUser} from "../../Models/user";
 import * as db from "../../database/user";
 import mongodb from "mongodb";
 
-export const getUser = async (user: IUser): Promise<IUser | null> => {
+export const getUser = async (user: ILoginData): Promise<IUser | null> => {
     try {
         return await db.getUser(user);
     } catch (error) {
@@ -10,7 +10,7 @@ export const getUser = async (user: IUser): Promise<IUser | null> => {
     }
 }
 
-export const saveUser = async (user: IUser): Promise<IUser> => {
+export const saveUser = async (user: ILoginData): Promise<IUser> => {
     try {
         return await db.saveUser(user);
     } catch (error) {
