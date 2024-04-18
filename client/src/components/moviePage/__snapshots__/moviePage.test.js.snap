@@ -1,0 +1,389 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`moviePage Should render correctly a moviePage 1`] = `
+<DocumentFragment>
+  <section
+    class="movie-card movie-card--full"
+  >
+    <div
+      class="movie-card__hero"
+    >
+      <div
+        class="movie-card__bg"
+      >
+        <img
+          src="https://es31-server.appspot.com/wtw/static/film/preview/pulp-fiction.jpg"
+        />
+      </div>
+      <h1
+        class="visually-hidden"
+      >
+        WTW
+      </h1>
+      <header
+        class="page-header movie-card__head"
+      >
+        <div
+          class="logo"
+        >
+          <a
+            class="logo__link"
+          >
+            <span
+              class="logo__letter logo__letter--1"
+            >
+              W
+            </span>
+            <span
+              class="logo__letter logo__letter--2"
+            >
+              T
+            </span>
+            <span
+              class="logo__letter logo__letter--3"
+            >
+              W
+            </span>
+          </a>
+        </div>
+        <div
+          class="user-block"
+        >
+          <div
+            class="user-block"
+          >
+            <a
+              class="user-block__link"
+              href="sign-in.html"
+            >
+              Sign in
+            </a>
+          </div>
+        </div>
+      </header>
+      <div
+        class="movie-card__wrap"
+      >
+        <div
+          class="movie-card__desc"
+        >
+          <h2
+            class="movie-card__title"
+          />
+          <p
+            class="movie-card__meta"
+          >
+            <span
+              class="movie-card__genre"
+            >
+              Crime
+            </span>
+            <span
+              class="movie-card__year"
+            >
+              1994
+            </span>
+          </p>
+          <div
+            class="movie-card__buttons"
+          >
+            <button
+              class="btn btn--play movie-card__button"
+              type="button"
+            >
+              <svg
+                height="19"
+                viewBox="0 0 19 19"
+                width="19"
+              >
+                <use
+                  xlink:href="#play-s"
+                />
+              </svg>
+              <span>
+                Play
+              </span>
+            </button>
+            <button
+              class="btn btn--list movie-card__button"
+              type="button"
+            >
+              <svg
+                height="20"
+                viewBox="0 0 19 20"
+                width="19"
+              >
+                <use
+                  xlink:href="#add"
+                />
+              </svg>
+              <span>
+                My list
+              </span>
+            </button>
+            <a
+              class="btn movie-card__button"
+              href="add-review.html"
+            >
+              Add review
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="movie-card__wrap movie-card__translate-top"
+    >
+      <div
+        class="movie-card__info"
+      >
+        <div
+          class="movie-card__poster movie-card__poster--big"
+        >
+          <img
+            alt="The Grand Budapest Hotel poster"
+            height="327"
+            src="https://es31-server.appspot.com/wtw/static/film/poster/Pulp_Fiction.jpg"
+            width="218"
+          />
+        </div>
+        <div
+          class="movie-card__desc"
+        >
+          <nav
+            class="movie-nav movie-card__nav"
+          >
+            <ul
+              class="movie-nav__list"
+            >
+              <li
+                class="movie-nav__item movie-nav__item--active"
+              >
+                <a
+                  class="movie-nav__link"
+                  href="#"
+                >
+                  Overview
+                </a>
+              </li>
+              <li
+                class="movie-nav__item"
+              >
+                <a
+                  class="movie-nav__link"
+                  href="#"
+                >
+                  Details
+                </a>
+              </li>
+              <li
+                class="movie-nav__item"
+              >
+                <a
+                  class="movie-nav__link"
+                  href="#"
+                >
+                  Reviews
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div
+            class="movie-rating"
+          >
+            <div
+              class="movie-rating__score"
+            >
+              4.5
+            </div>
+            <p
+              class="movie-rating__meta"
+            >
+              <span
+                class="movie-rating__level"
+              >
+                Normal
+              </span>
+              <span
+                class="movie-rating__count"
+              >
+                1635992 ratings
+              </span>
+            </p>
+          </div>
+          <div
+            class="movie-card__text"
+          >
+            The lives of two mob hitmen, a boxer, a gangster & his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.
+            <p
+              class="movie-card__director"
+            >
+              <strong>
+                Director: Quentin Tarantino
+              </strong>
+            </p>
+            <p
+              class="movie-card__starring"
+            >
+              <strong>
+                Starring: John Travolta, Uma Thurman, Samuel L. Jackson
+              </strong>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div
+    class="page-content"
+  >
+    <section
+      class="catalog catalog--like-this"
+    >
+      <h2
+        class="catalog__title"
+      >
+        More like this
+      </h2>
+      <div
+        class="catalog__movies-list"
+      >
+        <article
+          class="small-movie-card catalog__movies-card"
+        >
+          <video
+            class="player__video"
+            height="175"
+            poster="undefined"
+            preload="none"
+            src="undefined"
+            width="280"
+          />
+          <h3
+            class="small-movie-card__title"
+          >
+            <a
+              class="small-movie-card__link"
+              href="movie-page.html"
+            />
+          </h3>
+        </article>
+        <article
+          class="small-movie-card catalog__movies-card"
+        >
+          <video
+            class="player__video"
+            height="175"
+            poster="undefined"
+            preload="none"
+            src="undefined"
+            width="280"
+          />
+          <h3
+            class="small-movie-card__title"
+          >
+            <a
+              class="small-movie-card__link"
+              href="movie-page.html"
+            />
+          </h3>
+        </article>
+        <article
+          class="small-movie-card catalog__movies-card"
+        >
+          <video
+            class="player__video"
+            height="175"
+            poster="undefined"
+            preload="none"
+            src="undefined"
+            width="280"
+          />
+          <h3
+            class="small-movie-card__title"
+          >
+            <a
+              class="small-movie-card__link"
+              href="movie-page.html"
+            />
+          </h3>
+        </article>
+        <article
+          class="small-movie-card catalog__movies-card"
+        >
+          <video
+            class="player__video"
+            height="175"
+            poster="undefined"
+            preload="none"
+            src="undefined"
+            width="280"
+          />
+          <h3
+            class="small-movie-card__title"
+          >
+            <a
+              class="small-movie-card__link"
+              href="movie-page.html"
+            />
+          </h3>
+        </article>
+        <article
+          class="small-movie-card catalog__movies-card"
+        >
+          <video
+            class="player__video"
+            height="175"
+            poster="undefined"
+            preload="none"
+            src="undefined"
+            width="280"
+          />
+          <h3
+            class="small-movie-card__title"
+          >
+            <a
+              class="small-movie-card__link"
+              href="movie-page.html"
+            />
+          </h3>
+        </article>
+      </div>
+    </section>
+    <footer
+      class="page-footer"
+    >
+      <div
+        class="logo"
+      >
+        <a
+          class="logo__link logo__link--light"
+        >
+          <span
+            class="logo__letter logo__letter--1"
+          >
+            W
+          </span>
+          <span
+            class="logo__letter logo__letter--2"
+          >
+            T
+          </span>
+          <span
+            class="logo__letter logo__letter--3"
+          >
+            W
+          </span>
+        </a>
+      </div>
+      <div
+        class="copyright"
+      >
+        <p>
+          © 2019 What to watch Ltd.
+        </p>
+      </div>
+    </footer>
+  </div>
+</DocumentFragment>
+`;

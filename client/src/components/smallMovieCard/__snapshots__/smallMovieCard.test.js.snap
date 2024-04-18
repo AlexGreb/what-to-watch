@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SmallMovieCard Should render correctly movie card 1`] = `
+<DocumentFragment>
+  <article
+    class="small-movie-card catalog__movies-card"
+  >
+    <video
+      class="player__video"
+      height="175"
+      poster="https://es31-server.appspot.com/wtw/static/film/preview/pulp-fiction.jpg"
+      preload="none"
+      src="http://peach.themazzone.com/durian/movies/sintel-1024-surround.mp4"
+      width="280"
+    />
+    <h3
+      class="small-movie-card__title"
+    >
+      <a
+        class="small-movie-card__link"
+        href="movie-page.html"
+      >
+        Pulp Fiction
+      </a>
+    </h3>
+  </article>
+</DocumentFragment>
+`;

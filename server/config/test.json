@@ -1,0 +1,4 @@
+{
+  "DBHost": "mongodb://localhost:27017/what-to-watch",
+  "apiUrl": "http://localhost:3003/api/v1/",
+  "saltPassword": "Salt"}

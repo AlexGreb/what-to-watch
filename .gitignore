@@ -1,4 +1,5 @@
-public/bundle.js
-public/bundle.js.map
+client/public/bundle.js
+client/public/bundle.js.map
 node_modules
 sintel-1024-surround.mp4
+/server/dist/

@@ -1,0 +1,7 @@
+{
+  "port": 3002,
+  "DBHost": "mongodb://localhost:27017/what-to-watch",
+  "apiUrl": "http://localhost:3002/api/v1/",
+  "secret": "SECRET_KEY",
+  "saltPassword": "Salt"
+}
