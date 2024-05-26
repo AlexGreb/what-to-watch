@@ -42,8 +42,8 @@
     "webpack-dev-server": "4.7.2"
   },
   "scripts": {
-    "start": "NODE_OPTIONS=--openssl-legacy-provider webpack serve --mode development",
-    "build": "../node_modules/.bin/webpack --mode production",
+    "start": "NODE_OPTIONS=--openssl-legacy-provider webpack serve --mode production",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider ../node_modules/.bin/webpack --mode production",
     "eslint": "../node_modules/.bin/eslint --ext .jsx --ext .js src/",
     "test": "npm run eslint && ../node_modules/.bin/jest --detectOpenHandles"
   },

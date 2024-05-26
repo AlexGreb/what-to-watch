@@ -1,11 +1,11 @@
 import { Schema, model } from 'mongoose';
 
 export interface IUser {
+    _id: string;
     email:string;
     password: string;
-    name: string
+    name: string;
 }
-
 
 export interface ILoginData {
     email:string;

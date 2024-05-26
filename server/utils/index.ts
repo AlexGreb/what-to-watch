@@ -1,4 +1,6 @@
 import {ErrorException} from "../types";
+import exp from "constants";
+import {IMovie} from "../Models/movie";
 
 export const isErrorException = (error: unknown | string): error is ErrorException => {
     return (
@@ -23,4 +25,16 @@ export const getResError = (error: unknown, resStatus?: number) => {
         status,
         data
     }
+}
+
+export const setFavoriteMovies = (favoriteMovieList:Array<IMovie>, movies: Array<IMovie>): Array<IMovie> => {
+    const favoriteIds: Set<number> = new Set();
+    favoriteMovieList.forEach((it) => {
+        favoriteIds.add(it.id)
+    })
+
+    return movies.map((it) => {
+        it.isFavorite = favoriteIds.has(it.id);
+        return it;
+    })
 }

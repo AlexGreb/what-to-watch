@@ -18,6 +18,6 @@ export const saveUser = async (user: ILoginData): Promise<IUser> => {
     }
 }
 
-export const createUserCollection = async (): Promise<mongodb.Collection<IUser>> => {
-    return await db.createUserCollection()
-}
+// export const createUserCollection = async (): Promise<mongodb.Collection<IUser>> => {
+//     return await db.createUserCollection()
+// }

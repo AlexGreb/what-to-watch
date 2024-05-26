@@ -7,12 +7,12 @@ import config from 'config';
 import cors from 'cors';
 import {connectDB} from './database/connect';
 import helmet from "helmet";
+import {favoriteRouter} from "./routes/v1/favorites";
 
-const port: number = config.get<Port>('port')
+const port: number = config.get<Port>('port');
 const app: Express = express();
 
 if(config.util.getEnv('NODE_ENV') !== 'test') {
-    //morgan для вывода логов в консоль
     app.use(morgan('combined')); //'combined' выводит логи в стиле apache
 }
 app.use(helmet.xssFilter());
@@ -24,8 +24,7 @@ app.use(cors({
     credentials: true
 }))
 app.use(express.json());
-
-app.use([moviesRouter, authRouter]);
+app.use([moviesRouter, authRouter, favoriteRouter]);
 
 const server = app.listen(port, async () => {
     if(config.util.getEnv('NODE_ENV') !== 'test') {

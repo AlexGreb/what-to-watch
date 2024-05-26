@@ -19,10 +19,10 @@ export const registration = async (req: Request<IUser>, res: Response) => {
             })
         }
         const {email, password, name} = req.body;
-        const userData: IUser = {
+        const userData = {
             email, password, name
         }
-        const candidate = await getUser(userData);
+        const candidate: IUser | null = await getUser(userData);
         if(candidate) {
             return res.status(400).json({
                 status: 'FAILED',
@@ -91,13 +91,13 @@ export const login = async (req: Request<IUser>, res: Response) => {
     }
 
     const accessToken = getAccessToken(userDB);
-
     return res.status(200).json(
         {
             status: 'OK',
             data: {
                 user: {
-                    email
+                    email,
+                    userId: userDB._id
                 },
                 accessToken
             }

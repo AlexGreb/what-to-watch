@@ -8,7 +8,7 @@ export const getUser = async (user: UserData): Promise<IUser | null> => {
     try {
         return await UserModel.findOne({
             email: user.email
-        }, { _id: 0 }).exec();
+        }).exec();
     } catch (error) {
         throw { status: 500, message: error };
     }

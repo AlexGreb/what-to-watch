@@ -8,10 +8,19 @@ export const createApi = () => {
   const api = axios.create({
     baseURL: BASE_URL,
     timeout: API_TIMEOUT,
-    withCredentials: true
+    withCredentials: true,
+    headers: {
+      'Authorization': `Bearer `
+    }
   });
 
+  let token = null;
+
   const onSuccess = (response) => {
+    if(!token) {
+      token = response.data.token;
+    }
+
     return response;
   };
 
@@ -28,8 +37,12 @@ export const createApi = () => {
 
     throw err;
   };
-
+  api.interceptors.request.use((config) => {
+    if (token && config.headers) {
+      config.headers[`x-token`] = token;
+    }
+    return config;
+  });
   api.interceptors.response.use(onSuccess, onFail);
-
   return api;
 };

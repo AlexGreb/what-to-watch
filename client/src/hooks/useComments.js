@@ -23,7 +23,6 @@ const useComments = (movieId, ref) => {
   const dispatch = useDispatch();
   const [reviewData, changeReviewData] = useState({});
   const [isValid, changeIsValid] = useState(false);
-  const textarea = ref.current;
 
   useEffect(() => {
     if (sendingReviewStatus) {
@@ -44,7 +43,7 @@ const useComments = (movieId, ref) => {
   const changeTextReviewHandler = () => {
     const newValue = {
       ...reviewData,
-      comment: textarea.value
+      comment: ref.current.value
     };
     changeReviewData(newValue);
     changeIsValid(isValidationReviewForm(newValue));

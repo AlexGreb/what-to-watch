@@ -19,19 +19,19 @@ const Operations = {
       `${namespaces.MOVIES}/fetchMoviesList`,
       async (_, {extra}) => {
         const {data} = await extra.get(dataUrl.FILMS);
-        return data.data.map(createMovie);
+        return data.map(createMovie);
       }),
   fetchPromoMovie: createAsyncThunk(
       `${namespaces.MOVIES}/promo`,
       async (_, {extra}) => {
-        const response = await extra.get(dataUrl.PROMO);
-        return createMovie(response.data.data);
+        const {data} = await extra.get(dataUrl.PROMO);
+        return createMovie(data);
       }),
   fetchReviews: createAsyncThunk(
       `${namespaces.MOVIES}/fetchReviews`,
       async (movieId, {extra}) => {
-        const response = await extra.get(`${dataUrl.REVIEWS}${movieId}`);
-        return response.data.data.map(createReview);
+        const {data} = await extra.get(`${dataUrl.REVIEWS}${movieId}`);
+        return data.map(createReview);
       }
   ),
   fetchComment: createAsyncThunk(

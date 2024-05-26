@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 const AddReview = ({movie}) => {
   const textarea = useRef(null);
   const {changeRatingHandler, isValid, changeTextReviewHandler, sendCommentHandler, reviewData} = useComments(movie.id, textarea);
+
   return (
     <form action="#" className="add-review__form">
       <div className="rating">

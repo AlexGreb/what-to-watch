@@ -1,4 +1,4 @@
-import {IMovie, MovieId} from "../Models/movie";
+import {FavoriteMoviesModel, IMovie, MovieId} from "../Models/movie";
 import {MovieModel} from "../Models/movie";
 
 export const getAllMovies = async (): Promise<IMovie[]> => {
@@ -26,10 +26,3 @@ export const getPromo = async (): Promise<IMovie | null> =>{
     }
 }
 
-export const getComments = async () => {
-    try {
-        // return await
-    } catch (error) {
-        throw { status: 500, message: error }
-    }
-}

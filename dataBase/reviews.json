@@ -1,0 +1,103 @@
+[
+  {
+    "movieId": 1,
+    "reviews": [{"id":1,"user":{"id":17,"name":"Emely"},"rating":6.5,"comment":"This movie really touched my heart, it really is the best movie of the year and everyone should see this masterpiece.","date":"2024-01-07T07:19:48.519Z"}]
+  },
+  {
+    "movieId": 2,
+    "reviews":[{"id":1,"user":{"id":12,"name":"Isaac"},"rating":6.9,"comment":"A movie that will take you to another world full of emotions.","date":"2024-01-14T07:19:48.519Z"}]
+  },
+  {
+    "movieId": 3,
+    "reviews":[{"id":1,"user":{"id":14,"name":"Corey"},"rating":9,"comment":"A movie that will take you to another world full of emotions.","date":"2024-01-08T07:19:48.519Z"}]
+  },
+  {
+    "movieId": 4,
+    "reviews":[]
+  },
+  {
+    "movieId": 5,
+    "reviews":[{"id":1,"user":{"id":16,"name":"Mollie"},"rating":5.7,"comment":"This movie really touched my heart, it really is the best movie of the year and everyone should see this masterpiece.","date":"2024-01-19T07:19:48.519Z"}]
+  },
+  {
+    "movieId": 6,
+    "reviews":[]
+  },
+  {
+    "movieId": 7,
+    "reviews":[{"id":1,"user":{"id":10,"name":"Max"},"rating":1.2,"comment":"A movie that will take you to another world full of emotions.","date":"2024-01-07T07:19:48.519Z"}]
+  },
+  {
+    "movieId": 8,
+    "reviews":[]
+  },
+  {
+    "movieId": 9,
+    "reviews":[]
+  },
+  {
+    "movieId": 10,
+    "reviews":[]
+  },
+  {
+    "movieId": 11,
+    "reviews":[{"id":1,"user":{"id":15,"name":"Kendall"},"rating":5.4,"comment":"I personally found this movie to be boring. Definitely one of the most boring movies I've ever seen.","date":"2024-01-22T07:19:48.519Z"}]
+  },
+  {
+    "movieId": 12,
+    "reviews":[{"id":1,"user":{"id":11,"name":"Jack"},"rating":3.8,"comment":"I really find it difficult to believe this movie is rated highly by people. It's hands down the worst movie I've seen in my life","date":"2024-01-24T07:19:48.519Z"}]
+  },
+  {
+    "movieId": 13,
+    "reviews":[{"id":1,"user":{"id":12,"name":"Isaac"},"rating":9.2,"comment":"Poised to be an instant classic, almost everything about this film is phenomenal - the acting, the cinematography, the discography, etc.","date":"2024-01-09T07:19:48.519Z"}]
+  },
+  {
+    "movieId": 14,
+    "reviews":[{"id":1,"user":{"id":15,"name":"Kendall"},"rating":6.8,"comment":"Poised to be an instant classic, almost everything about this film is phenomenal - the acting, the cinematography, the discography, etc.","date":"2024-01-05T07:19:48.519Z"},{"id":2,"user":{"id":16,"name":"Mollie"},"rating":7.2,"comment":"I love this movie. This film is a milestone in cinematography. Great Immersive camera-work. This film is an experience and i has already seen it 4 times and I only see more quality of the film.","date":"2024-01-26T07:19:48.519Z"}]
+  },
+  {
+    "movieId": 15,
+    "reviews":[{"id":1,"user":{"id":18,"name":"Sophie"},"rating":1.1,"comment":"I love this movie. This film is a milestone in cinematography. Great Immersive camera-work. This film is an experience and i has already seen it 4 times and I only see more quality of the film.","date":"2024-01-21T07:19:48.519Z"}]
+  },
+  {
+    "movieId": 16,
+    "reviews":[{"id":1,"user":{"id":11,"name":"Jack"},"rating":2.4,"comment":"The editing is a mess, and the transitions of the plot or characters are rather strange. There is no narrative focus and the storytelling is unbalanced. I cannot really understand why such a bad movie received an overwhelming approval from the critics. ","date":"2024-01-11T07:19:48.519Z"},{"id":2,"user":{"id":14,"name":"Corey"},"rating":4.9,"comment":"I personally found this movie to be boring. Definitely one of the most boring movies I've ever seen.","date":"2024-01-22T07:19:48.519Z"},{"id":3,"user":{"id":17,"name":"Emely"},"rating":3.4,"comment":"I personally found this movie to be boring. Definitely one of the most boring movies I've ever seen.","date":"2024-01-30T07:19:48.519Z"}]
+  },
+  {
+    "movieId": 17,
+    "reviews":[{"id":1,"user":{"id":15,"name":"Kendall"},"rating":5.6,"comment":"This movie is just plain bad. There must be some big payola going round this awards season. Badly written, average acting at best, all the characters are unrelatable and inlikeable. 2 hours of my life wasted.","date":"2024-01-10T07:19:48.519Z"},{"id":2,"user":{"id":17,"name":"Emely"},"rating":6.5,"comment":"This movie is just plain bad. There must be some big payola going round this awards season. Badly written, average acting at best, all the characters are unrelatable and inlikeable. 2 hours of my life wasted.","date":"2024-01-06T07:19:48.519Z"}]
+  },
+  {
+    "movieId": 18,
+    "reviews":[{"id":1,"user":{"id":15,"name":"Kendall"},"rating":2.6,"comment":"I love this movie. This film is a milestone in cinematography. Great Immersive camera-work. This film is an experience and i has already seen it 4 times and I only see more quality of the film.","date":"2024-01-08T07:19:48.519Z"},{"id":2,"user":{"id":14,"name":"Corey"},"rating":4.1,"comment":"I love this movie. This film is a milestone in cinematography. Great Immersive camera-work. This film is an experience and i has already seen it 4 times and I only see more quality of the film.","date":"2024-01-13T07:19:48.519Z"}]
+  },
+  {
+    "movieId": 19,
+    "reviews":[{"id":1,"user":{"id":11,"name":"Jack"},"rating":4.9,"comment":"This movie is just plain bad. There must be some big payola going round this awards season. Badly written, average acting at best, all the characters are unrelatable and inlikeable. 2 hours of my life wasted.","date":"2024-01-11T07:19:48.519Z"}]
+  },
+  {
+    "movieId": 20,
+    "reviews":[{"id":1,"user":{"id":14,"name":"Corey"},"rating":8.1,"comment":"Unfortunately we don't have a reliable way to tell the true ratings of a movie.","date":"2024-02-01T07:19:48.519Z"},{"id":2,"user":{"id":11,"name":"Jack"},"rating":6.4,"comment":"It was well acted, directed, and the music was good. But the story is yawn. Not trying to rip anybody but I checked my watch a dozen times during this movie.","date":"2024-01-21T07:19:48.519Z"}]
+  },
+  {
+    "movieId": 21,
+    "reviews":[{"id":1,"user":{"id":11,"name":"Jack"},"rating":6.3,"comment":"The editing is a mess, and the transitions of the plot or characters are rather strange. There is no narrative focus and the storytelling is unbalanced. I cannot really understand why such a bad movie received an overwhelming approval from the critics. ","date":"2024-01-26T07:19:48.519Z"},{"id":2,"user":{"id":12,"name":"Isaac"},"rating":1.5,"comment":"I love this movie. This film is a milestone in cinematography. Great Immersive camera-work. This film is an experience and i has already seen it 4 times and I only see more quality of the film.","date":"2024-01-31T07:19:48.519Z"},{"id":3,"user":{"id":10,"name":"Max"},"rating":2.6,"comment":"I personally found this movie to be boring. Definitely one of the most boring movies I've ever seen.","date":"2024-01-30T07:19:48.519Z"}]
+  },
+  {
+    "movieId": 22,
+    "reviews":[{"id":1,"user":{"id":10,"name":"Max"},"rating":8.5,"comment":"I love this movie. This film is a milestone in cinematography. Great Immersive camera-work. This film is an experience and i has already seen it 4 times and I only see more quality of the film.","date":"2024-01-20T07:19:48.519Z"},{"id":2,"user":{"id":16,"name":"Mollie"},"rating":7.1,"comment":"Unfortunately we don't have a reliable way to tell the true ratings of a movie.","date":"2024-01-31T07:19:48.519Z"},{"id":3,"user":{"id":16,"name":"Mollie"},"rating":4.2,"comment":"The editing is a mess, and the transitions of the plot or characters are rather strange. There is no narrative focus and the storytelling is unbalanced. I cannot really understand why such a bad movie received an overwhelming approval from the critics. ","date":"2024-01-21T07:19:48.519Z"}]
+  },
+  {
+    "movieId": 23,
+    "reviews":[{"id":1,"user":{"id":16,"name":"Mollie"},"rating":4.5,"comment":"It was well acted, directed, and the music was good. But the story is yawn. Not trying to rip anybody but I checked my watch a dozen times during this movie.","date":"2024-02-01T07:19:48.519Z"},{"id":2,"user":{"id":13,"name":"Zak"},"rating":1.6,"comment":"The editing is a mess, and the transitions of the plot or characters are rather strange. There is no narrative focus and the storytelling is unbalanced. I cannot really understand why such a bad movie received an overwhelming approval from the critics. ","date":"2024-01-16T07:19:48.519Z"},{"id":3,"user":{"id":14,"name":"Corey"},"rating":2,"comment":"Poised to be an instant classic, almost everything about this film is phenomenal - the acting, the cinematography, the discography, etc.","date":"2024-01-18T07:19:48.519Z"}]
+  },
+  {
+    "movieId": 24,
+    "reviews":[{"id":1,"user":{"id":19,"name":"Christina"},"rating":9.4,"comment":"This movie is just plain bad. There must be some big payola going round this awards season. Badly written, average acting at best, all the characters are unrelatable and inlikeable. 2 hours of my life wasted.","date":"2024-02-01T07:19:48.519Z"}]
+  },
+  {
+    "movieId": 25,
+    "reviews":[{"id":1,"user":{"id":14,"name":"Corey"},"rating":3.7,"comment":"The editing is a mess, and the transitions of the plot or characters are rather strange. There is no narrative focus and the storytelling is unbalanced. I cannot really understand why such a bad movie received an overwhelming approval from the critics. ","date":"2024-01-18T07:19:48.519Z"},{"id":2,"user":{"id":11,"name":"Jack"},"rating":6.2,"comment":"A movie that will take you to another world full of emotions.","date":"2024-01-10T07:19:48.519Z"}]
+  }
+]
+

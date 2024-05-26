@@ -20,6 +20,11 @@ export interface IMovie {
     previewVideoLink: string
 }
 
+export interface IFavoriteMovies {
+    userId: number;
+    movies: Array<IMovie>
+}
+
 export type MovieId = IMovie['id'];
 
 const movieSchema = new Schema<IMovie>({
@@ -41,4 +46,12 @@ const movieSchema = new Schema<IMovie>({
     videoLink: { type: String, required: true },
     previewVideoLink: { type: String, required: true },
 });
+
+const favoriteMoviesSchema = new Schema<IFavoriteMovies>({
+    userId: {type: Number, unique: true, required: true},
+    movies: [movieSchema]
+})
+
+
 export const MovieModel = model<IMovie>('Movie', movieSchema);
+export const FavoriteMoviesModel = model<IFavoriteMovies>('favoritesMovies', favoriteMoviesSchema);

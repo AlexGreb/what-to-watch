@@ -2,14 +2,27 @@ import type {ResponseData} from "../../types";
 import type {IMovie} from "../../Models/movie";
 import type {Request, Response} from "express";
 import * as movieService from "../../services/v1/movieService";
-import {getResError} from "../../utils"
+import {getFavoriteMovies} from "../../services/v1/favoriteService";
+import {getResError, setFavoriteMovies} from "../../utils"
+import {validationResult} from "express-validator";
 
 export const getAllMovies = async (req: Request, res: Response): Promise<void> => {
     try {
+        const errors = validationResult(req);
+        if(!errors.isEmpty()) {
+            res.status(404).json({
+                status: 'FAILED',
+                data: {
+                    error: errors,
+                }
+            })
+        }
         const movies: IMovie[] = await movieService.getAllMovies();
+        const favoriteMovies = await getFavoriteMovies(Number(req.params.userId));
+        const moviesWithFavoriteUser = setFavoriteMovies(favoriteMovies, movies);
         const data: ResponseData<IMovie[]> = {
             status: 'OK',
-            data: movies
+            data: moviesWithFavoriteUser
         }
         res.json(data);
     } catch(error: unknown) {
@@ -62,13 +75,5 @@ export const getPromo = async (req: Request, res: Response): Promise<void> =>{
             status: 'FAILED',
             data
         });
-    }
-}
-
-export const getComments = async (req: Request, res: Response) => {
-    try {
-
-    } catch (error) {
-
     }
 }

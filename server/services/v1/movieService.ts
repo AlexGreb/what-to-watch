@@ -1,4 +1,4 @@
-import type {IMovie, MovieId} from "../../Models/movie";
+import type {IFavoriteMovies, IMovie, MovieId} from "../../Models/movie";
 import * as db from '../../database/movie';
 
 export const getAllMovies = async (): Promise<IMovie[]> => {
@@ -20,14 +20,6 @@ export const getMovie = async (movieId: MovieId): Promise<IMovie | null> => {
 export const getPromo = async (): Promise<IMovie | null> =>{
     try {
         return await db.getPromo();
-    } catch (error) {
-        throw error
-    }
-}
-
-export const getComments = async () => {
-    try {
-        return await db.getComments();
     } catch (error) {
         throw error
     }
